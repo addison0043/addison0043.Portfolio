@@ -1,0 +1,292 @@
+/*sets everything up in a grid layout*/
+
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  	font-size: 18px;
+  	line-height: 34px;
+  	background-image: url("../low_contrast_linen/low_contrast_linen.png");
+}
+
+#all {
+	display: grid;
+	grid-template-columns: 4% auto 4% auto 10%;
+	grid-template-rows: 20px auto 1fr 100px;
+}
+
+/*header styling*/
+
+header {
+	width: 100%;
+	height: 130px;
+	border-radius: 5px;
+	background-color: #083c5d;
+	display: grid;
+	grid-template-columns: 4% 2fr 1fr;
+}
+
+#yourname {
+	width: 250px;
+	height: 100px;
+	border-radius: 10px;
+	background-color: white;
+	grid-column: 2;
+	display: flex;
+	align-self: center;
+}
+
+#yourname h1 {
+	margin: auto;
+	line-height: 40px;
+}
+
+nav {
+	grid-column: 3;
+	display: grid;
+	grid-template-columns: auto auto;
+	margin-right: 5px;
+	color: gray;
+}
+
+nav h1 {
+	color: white;
+	font-size: 20px;
+	text-shadow: 1px 2px rgba(0,0,0,.6);
+}
+
+nav h1:hover {
+	color: #77c9d4;
+}
+
+	/*center nav links within grid cells*/
+	nav div {
+		display: flex;
+	}
+
+	nav div a {
+		margin: auto;
+		text-decoration: none;
+		text-shadow: 1px 1px rgba(0,0,0,.6);
+	}
+	/**/
+
+/**/
+
+/*font sytling*/
+
+h1, h2 {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-weight: 700;
+  color: #083c5d;
+  text-shadow: 1px 2px rgba(119,201,212,.6);	
+}
+
+h2 {
+	font-size: 25px;
+}
+
+
+/**/
+
+/*Main section styling*/
+
+.main-section {
+	grid-column: 2;
+	grid-row: 2;
+	width: 755px;
+	height: 100%;
+  	background: white;
+  	box-shadow: 2px 2px 2px #77c9d4;
+  	border: 1px solid black;
+  	border-radius: 5px;
+  	padding: 20px;
+}
+
+.main-section h1 {
+	text-align: left;
+	margin-left: 25px;
+	font-size: 35px;	
+}	
+
+#biophoto {
+  	float: left;
+  	width: 200px;
+  	border: 1px solid black;
+  	border-radius: 10px;
+  	box-shadow: 2px 2px 2px #77c9d4;
+  	margin: 0px 25px 25px 25px;
+}
+
+.main-section p {
+	margin-left: 0px 25px;
+}
+
+/**/
+
+/*"Connect With Me" / social media links styled here*/
+
+.connectwithme {
+	grid-row: 2;
+	grid-column: 4;
+	background-color: white;
+	box-shadow: 2px 2px 2px #77C9D4;
+	text-shadow: 1px 2px rgba(50, 140, 193,.6);
+	border: 1px solid black;
+	border-radius: 5px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 50% 50%;
+	margin-left: 20px;
+	max-height: 200px;
+	min-height: 110px;
+	min-width: 225px;
+}
+
+#connectText {
+	grid-column: 1/4;
+	grid-row: 1;
+	display: flex;
+}
+
+#connectText h2 {
+	margin: auto;
+}
+
+.social {
+	height: 50px;
+	width: 50px;
+	border-radius: 10px;
+}
+
+.social:hover {
+	background-color: #77C9D4;
+}
+
+.icon {
+	grid-row: 2;
+	justify-self: center;
+	align-self: center;
+}
+
+/**/
+
+/*creates grid on portfolio page*/
+
+#portGrid {
+	margin: auto;
+	display: grid;
+	grid-row-gap: 20px;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: minmax(210px, auto);
+	grid-auto-flow: row;
+}
+
+.portphoto {
+  	height: 100%;
+  	width: 100%;
+  	display: flex;
+  	flex-direction: column;
+}
+
+.portphoto img {
+  width: 320px;
+  height: 240px;
+  border: 1px solid black;
+  box-shadow: 5px 5px 2px rgba(0,0,0,.6);
+  border-radius: 10px;
+  margin: auto;
+}
+
+.portphoto img:hover {
+	box-shadow: 5px 5px 2px #77c9d4;
+}
+
+.portphoto h3 {
+	margin: 0 auto;
+	background-color: rgba(0, 0, 0, .5);
+	border-radius: 10px;
+	padding: 3px 6px;
+	position: relative;
+	top: 75%;
+	color: white;
+	text-shadow: 2px 2px rgba(0,0,0,1);
+}
+
+/*end of portfolio grid*/
+
+/*all footer styling here*/
+
+footer {
+	background: #083c5d;
+	color: #ebebeb;
+	font-family: serif;
+	border-top: 8px solid #77c9d4;
+	grid-row: 4/5;
+	grid-column: 1/6;
+	height: 100px;
+	border-radius: 5px;
+	display: flex;
+	margin-top: 20px;
+}
+
+footer div {
+	margin: auto;
+}
+
+/*end of footer styling*/
+
+/*Medium media query*/
+
+@media (max-width: 1050px) {
+	
+	#all {
+		grid-template-columns: auto;
+		grid-template-rows: 20px auto auto auto;
+		grid-gap: 30px;
+	}
+
+	.main-section {
+		grid-column: 1;
+		grid-row: 2;
+		justify-self: center;
+		width: 750px;
+		height: auto;
+	}
+
+	.connectwithme {
+		grid-column: 1;
+		grid-row: 3;
+		justify-self: center;
+	}
+
+	footer {
+		grid-row: 4;
+	}
+
+}
+
+@media (max-width: 840px) {
+
+		#portGrid {
+			grid-template-columns: auto;
+			grid-auto-rows: minmax(250px, auto);
+		}
+
+		nav {
+			grid-template-columns: auto;
+			grid-template-rows: auto auto;
+		}
+
+		.portphoto img {
+			width: 310px;
+			height: 240px;
+		}
+
+		.main-section {
+			width: 425px;
+		}
+
+		.main-section h1 {
+			text-align: center;
+}
+
+}
