@@ -209,6 +209,16 @@ h2 {
 	display: inline-block;
 }
 
+#vidPlay {
+	height: 150px;
+	width: 150px;
+	border-style: none;
+	box-shadow: none;
+	position: relative;
+	bottom: 85%;
+	opacity: .7;
+}
+
 a {
 	text-decoration: none;
 }
