@@ -10,7 +10,7 @@ body {
 #all {
 	display: grid;
 	grid-template-columns: 4% auto 4% auto 10%;
-	grid-template-rows: 20px auto 1fr 100px;
+	grid-template-rows: 20px auto 1fr 30px;
 }
 
 /*header styling*/
@@ -130,7 +130,6 @@ h2 {
 	border: 1px solid black;
 	border-radius: 5px;
 	padding: 10px;
-	text-align: center;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-column-gap: 10px;
@@ -171,7 +170,7 @@ h2 {
 
 /*creates grid on portfolio page*/
 
-#portGrid {
+.portGrid {
 	margin: 0 auto;
 	display: grid;
 	grid-gap: 20px;
@@ -247,11 +246,10 @@ footer div {
 
 /*Medium media query*/
 
-@media (max-width: 1210px) {
+@media (max-width: 1150px) {
 	
 	#all {
 		grid-template-columns: auto;
-		grid-template-rows: 20px auto auto auto;
 		grid-gap: 30px;
 	}
 
@@ -263,8 +261,8 @@ footer div {
 	}
 
 	#portGrid {
-			grid-gap: 30px;
-		}
+		grid-gap: 30px;
+	}
 
 	.connectwithme {
 		grid-column: 1;
@@ -288,11 +286,14 @@ footer div {
 
 /*Small media query*/
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
 
+		.main-section {
+			width: 410px;
+		}
 		#portGrid {
 			grid-template-columns: auto;
-			grid-auto-rows: minmax(250px, auto);
+			grid-template-rows: auto auto auto auto;
 		}
 
 		nav {
@@ -303,6 +304,7 @@ footer div {
 		.portphoto {
   			height: 320px;
   			width: 400px;
+			grid-column: 1;
 		}
 
 }
