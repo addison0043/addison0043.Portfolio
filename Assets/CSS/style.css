@@ -90,7 +90,7 @@ h2 {
 .main-section {
 	grid-column: 2;
 	grid-row: 2;
-	height: 100%;
+	max-width: 700px;
   	background: white;
   	box-shadow: 2px 2px 2px #77c9d4;
   	border: 1px solid black;
@@ -136,7 +136,7 @@ h2 {
 	grid-template-rows: 1fr 1fr;
 	max-height: 200px;
 	min-height: 110px;
-	width:; 390px;
+	width: 390px;
 }
 
 #connectText {
@@ -191,11 +191,28 @@ h2 {
   border-radius: 10px;
 }
 
-.portphoto img:hover {
+figcaption {
+	margin-top: 5px;
+}
+
+figure {
+	margin: 0 auto;
+	width: 320px;
+}
+
+figure img {
+	height: 240px;
+	width: 320px;
+	border: 1px solid black;
+  	box-shadow: 5px 5px 2px rgba(0,0,0,.6);
+  	border-radius: 10px;
+}
+
+.portphoto img:hover, figure img:hover {
 	box-shadow: 5px 5px 2px #77c9d4;
 }
 
-.WScaption, .caption {
+.caption {
 	text-align: center;
 	background-color: rgba(0, 0, 0, .5);
 	border-radius: 10px;
@@ -207,10 +224,9 @@ h2 {
 	display: inline-block;
 }
 
-/*applies to Writing Samples page only*/
-.WScaption {
-	padding: 0px;
-	bottom: 75%;
+figcaption {
+	font-family: "Lucida Console", Monaco, monospace;
+	text-align: center;
 }
 
 #vidPlay {
@@ -310,6 +326,21 @@ footer div {
   			height: 320px;
   			width: 400px;
 			grid-column: 1;
+		}
+
+		.caption {
+			bottom: 120px;
+			font-size: 
+		}
+
+		figure {
+  			width: 400px;
+			grid-column: 1;
+		}
+
+		figure img{
+			height: 320px;
+  			width: 400px;
 		}
 
 }
