@@ -229,6 +229,10 @@ figcaption {
 	text-align: center;
 }
 
+h4 {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
 #vidPlay {
 	height: 150px;
 	width: 150px;
