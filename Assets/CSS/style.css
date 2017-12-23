@@ -326,6 +326,10 @@ footer div {
 			grid-template-rows: auto auto;
 		}
 
+		#all h1 {
+			text-align: center;
+		}
+
 		.portphoto {
   			height: 320px;
   			width: 400px;
