@@ -338,6 +338,9 @@ footer div {
   			width: 400px;
 			grid-column: 1;
 		}
+		.photoCap {
+			grid-column: 1;
+		}
 
 		.caption {
 			bottom: 120px;
