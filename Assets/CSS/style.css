@@ -200,6 +200,10 @@ figcaption {
 	padding: 10px;
 }
 
+figcaption a {
+	color: red;
+}
+
 figure {
 	margin: 0 auto;
 	width: 320px;
