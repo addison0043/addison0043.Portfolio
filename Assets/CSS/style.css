@@ -10,9 +10,10 @@ body {
 }
 
 #all {
-	display: grid;
-	grid-template-columns: 4% auto 4% auto 10%;
-	grid-template-rows: 20px auto 1fr 30px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 20px 50px;
 }
 
 /*Header*/
@@ -23,7 +24,7 @@ header {
 	border-radius: 5px;
 	background-color: #083c5d;
 	display: grid;
-	grid-template-columns: 4% 2fr 1fr;
+	grid-template-columns: 2fr 1fr;
 }
 
 #yourname {
@@ -31,8 +32,9 @@ header {
 	height: 100px;
 	box-shadow: 3px 3px 5px #77c9d4;
 	border-radius: 10px;
+	margin-left: 50px;
 	background-color: white;
-	grid-column: 2;
+	grid-column: 1;
 	display: flex;
 	align-self: center;
 }
@@ -43,7 +45,7 @@ header {
 }
 
 nav {
-	grid-column: 3;
+	grid-column: 2;
 	display: grid;
 	grid-template-columns: auto auto;
 	margin-right: 5px;
@@ -91,9 +93,7 @@ h2 {
 /*Main section where content appears*/
 
 .main-section {
-	grid-column: 2;
-	grid-row: 2;
-	max-width: 700px;
+	width: 50%;
   	background: white;
   	box-shadow: 2px 2px 2px #77c9d4;
   	border: 1px solid black;
@@ -125,32 +125,26 @@ h2 {
 /*"Connect With Me" / social media links */
 
 .connectwithme {
-	grid-row: 2;
-	grid-column: 4;
 	background-color: white;
+	text-align: center;
 	box-shadow: 2px 2px 2px #77C9D4;
 	text-shadow: 1px 2px rgba(50, 140, 193,.6);
 	border: 1px solid black;
 	border-radius: 5px;
 	padding: 10px;
-	display: grid;
-	grid-template-columns: repeat(3, minmax(100px, 1fr));
-	grid-column-gap: 10px;
-	grid-template-rows: 1fr 1fr;
-	max-height: 200px;
-	min-height: 110px;
-	width: 350px;
+	height: 200px;
 }
 
-#connectText {
-	grid-column: 1/4;
-	grid-row: 1;
+#connectGrid {
 	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
-#connectText h2 {
+.connectwithme h2 {
 	font-size: 30px;
-	margin: auto;
+	margin: 20px auto;
 }
 
 .social {
@@ -165,9 +159,7 @@ h2 {
 }
 
 .icon {
-	grid-row: 2;
-	justify-self: center;
-	align-self: center;
+	flex: 1;
 }
 /*End of Connect With Me/Social Links*/
 
@@ -177,16 +169,16 @@ h2 {
 	margin: 0 auto;
 	display: grid;
 	grid-gap: 20px;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
 }
 
 .portphoto {
-  	height: 240px;
-  	width: 320px;
-  	text-align: center; 	
+/*  	height: 240px;
+  	width: 320px;*/
+  	text-align: center;
   	box-shadow: 7px 7px 2px rgba(0,0,0,.6);
   	border-radius: 10px;
-  	
+  	display: flex;
 }
 
 .portphoto img {
@@ -194,6 +186,11 @@ h2 {
 	height: 100%;
 	border-radius: 10px;
 	border: 1.5px solid black;
+}
+
+.squareCorners {
+	border-radius: 0px;
+	box-shadow: 5px 5px 2px rgba(0,0,0,.6);
 }
 
 figcaption {
@@ -206,12 +203,10 @@ figcaption a {
 
 figure {
 	margin: 0 auto;
-	width: 320px;
 }
 
 figure img {
-	height: 240px;
-	width: 320px;
+	width: 100%;
 	border: 1px solid black;
   	box-shadow: 5px 5px 2px rgba(0,0,0,.6);
   	border-radius: 10px;
@@ -229,22 +224,6 @@ figure img:hover {
 	box-shadow: 7px 7px 2px rgba(0,0,0,.6);
 }
 
-.caption {
-	text-align: center;
-	background-color: rgba(0, 0, 0, .5);
-	border-radius: 10px;
-	position: relative;
-	bottom: 110px;
-	padding: 0px 20px;
-	color: white;
-	text-shadow: 2px 2px rgba(0,0,0,1);
-	display: inline-block;
-}
-
-.caption h3 {
-	font-size: 25px;
-}
-
 figcaption {
 	font-family: "Lucida Console", Monaco, monospace;
 	text-align: center;
@@ -252,16 +231,6 @@ figcaption {
 
 h4 {
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
-}
-
-#vidPlay {
-	height: 150px;
-	width: 150px;
-	border-style: none;
-	box-shadow: none;
-	position: relative;
-	bottom: 85%;
-	opacity: .7;
 }
 
 a {
@@ -273,12 +242,11 @@ a {
 /*Footer*/
 
 footer {
+	width: 100%;
 	background: #083c5d;
 	color: #ebebeb;
 	font-family: serif;
 	border-top: 8px solid #77c9d4;
-	grid-row: 4/5;
-	grid-column: 1/6;
 	height: 100px;
 	display: flex;
 	margin-top: 20px;
@@ -294,15 +262,13 @@ footer div {
 @media (max-width: 1200px) {
 	
 	#all {
-		grid-template-columns: auto;
-		grid-gap: 30px;
+		flex-direction: column;
+		/*width: 100%;*/
 	}
 
 	.main-section {
-		grid-column: 1;
-		grid-row: 2;
-		justify-self: center;
-		height: auto;
+		width: 70%;
+		margin: 10px auto;
 	}
 
 	#portGrid {
@@ -310,11 +276,9 @@ footer div {
 	}
 
 	.connectwithme {
-		grid-column: 1;
-		grid-row: 3;
-		justify-self: center;
+		width: 70%;
+		margin: 10px auto;
 		height: auto;
-		width: auto;
 	}
 
 	.social {
@@ -357,15 +321,6 @@ footer div {
 		}
 		.photoCap {
 			grid-column: 1;
-		}
-
-		.caption {
-			bottom: 130px;
-			font-size: 
-		}
-
-		.caption h3 {
-			font-size: 30px;
 		}
 
 		figure {
