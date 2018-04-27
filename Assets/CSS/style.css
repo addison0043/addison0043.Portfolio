@@ -261,6 +261,10 @@ footer div {
 
 @media (max-width: 1200px) {
 	
+	body {
+		width: 100%;
+	}
+	
 	#all {
 		flex-direction: column;
 		/*width: 100%;*/
