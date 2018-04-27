@@ -267,7 +267,7 @@ footer div {
 	
 	#all {
 		flex-direction: column;
-		/*width: 100%;*/
+		width: 100%;
 	}
 
 	.main-section {
