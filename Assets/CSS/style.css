@@ -94,7 +94,7 @@ h2 {
 /*Main section where content appears*/
 
 .main-section {
-	width: 50%;
+	/*width: 50%;*/
   	background: white;
   	box-shadow: 2px 2px 2px #77c9d4;
   	border: 1px solid black;
