@@ -263,6 +263,7 @@ footer div {
 	
 	#all {
 		flex-direction: column;
+		justify-content: normal;
 		/*width: 100%;*/
 	}
 
