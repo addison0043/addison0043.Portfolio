@@ -51,43 +51,13 @@ body {
 	}
 /* End of HEADER */
 
-
-/* FOOTER */
-	#footer {
-		background: white;
-		text-align: center;
-		padding: 20px 0;
-	}
-
-	#footer li {
-		display: inline-block;
-		padding: 0px;
-	}
-
-	.links {
-		padding: 0;
-		margin: 0;
-	}
-
-
-	.social {
-		height: 100px;
-		width: 100px;
-		border-radius: 20px;
-		padding: 20px;
-	}
-
-	.social:hover {
-		background-color: rgba(119,201,212, .5);
-	}
-/* End of FOOTER */
-
 /* MAIN CONTENT */
 	.main-body {
 		background: white;
-		padding: 30px 20px;
+		padding: 30px 40px;
 		margin: 10px auto;
-		max-width: 80%;
+		max-width: 70%;
+		min-height: 300px;
 	}
 
 	.main-body h1 {
@@ -95,6 +65,19 @@ body {
 		text-transform: uppercase;
 		text-align: center;
 		letter-spacing: 4px;
+	}
+
+	.main-body p {
+		font-size: 18px;
+		line-height: 150%;
+		font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	}
+
+	#biophoto {
+		float: right;
+		border: 1px solid black;
+		border-radius: 3px;
+		margin: 0 0 30px 30px;
 	}
 
 	.content-grid {
@@ -121,9 +104,45 @@ body {
 		border-radius: 0px;
 	}
 
+	figcaption {
+		padding: 10px;
+		font-family: "Lucida Console", Monaco, monospace;
+		text-align: center;
+	}
 
+	figcaption a {
+		color: red;
+	}
 /* End of MAIN CONTENT */
 
+/* FOOTER */
+	#footer {
+		background: white;
+		text-align: center;
+		padding: 20px 0;
+	}
+
+	#footer li {
+		display: inline-block;
+		padding: 0px;
+	}
+
+	.links {
+		padding: 0;
+		margin: 0;
+	}
+
+	.social {
+		height: 100px;
+		width: 100px;
+		border-radius: 20px;
+		padding: 20px;
+	}
+
+	.social:hover {
+		background-color: rgba(119,201,212, .5);
+	}
+/* End of FOOTER */
 
 
 
@@ -138,114 +157,12 @@ body {
 
 
 
-/*Main section where content appears*/
-
-.main-section {
-	max-width: 80%;
-  	background: white;
-  	box-shadow: 2px 2px 2px #77c9d4;
-  	border: 1px solid black;
-  	border-radius: 5px;
-  	padding: 20px 30px 30px 20px;
-  	margin: 30px auto;
-  	text-align: center;
-}
-
-.main-section h1 {
-	text-align: center;
-	/*margin-left: 25px;*/
-	font-size: 35px;	
-}	
-
-#biophoto {
-  	float: right;
-  	width: 200px;
-  	border: 1px solid black;
-  	border-radius: 10px;
-  	box-shadow: 2px 2px 2px #77c9d4;
-  	margin: 0px 25px 25px 25px;
-}
-
-.main-section p {
-	margin: 0px 25px;
-}
-
-/*End of main section*/
-
-/*Social media links */
 
 
 
-/*End of Connect With Me/Social Links*/
 
-/*Creates grid on portfolio page*/
 
-.portGrid {
-	margin: 0 auto;
-	display: grid;
-	grid-gap: 20px;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-}
 
-.portphoto {
-/*  	height: 240px;
-  	width: 320px;*/
-  	text-align: center;
-  	box-shadow: 7px 7px 2px rgba(0,0,0,.6);
-  	border-radius: 10px;
-  	display: flex;
-}
-
-.portphoto img {
-	width: 100%;
-	height: 100%;
-	border-radius: 10px;
-	border: 1.5px solid black;
-}
-
-figcaption {
-	padding: 10px;
-}
-
-figcaption a {
-	color: red;
-}
-
-figure {
-	margin: 0 auto;
-}
-
-figure img {
-	width: 100%;
-	border: 1px solid black;
-  	box-shadow: 5px 5px 2px rgba(0,0,0,.6);
-  	border-radius: 10px;
-}
-
-.portphoto:hover {
-	box-shadow: 7px 7px 5px #77c9d4;
-}
-
-figure img:hover {
-	box-shadow: 5px 5px 2px #77c9d4;
-}
-
-.noHover:hover {
-	box-shadow: 7px 7px 2px rgba(0,0,0,.6);
-}
-
-figcaption {
-	font-family: "Lucida Console", Monaco, monospace;
-	text-align: center;
-}
-
-h4 {
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-}
-
-a {
-	text-decoration: none;
-}
 
 /*End of Grid*/
 
@@ -254,32 +171,7 @@ a {
 
 @media (max-width: 1200px) {
 	
-	#all {
-		flex-direction: column;
-		justify-content: normal;
-		/*width: 100%;*/
-	}
 
-	.main-section {
-		/*width: 70%;*/
-		/*margin: 10px auto;*/
-	}
-
-	#portGrid {
-		/*grid-gap: 20px;*/
-		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-	}
-
-	.connectwithme {
-		/*width: 70%;*/
-		margin: 10px auto;
-		height: auto;
-	}
-
-	/*.social {
-		height: 55px;
-		width: 55px;
-	}*/
 
 }
 /**/
@@ -287,53 +179,7 @@ a {
 /*Small media query*/
 
 @media (max-width: 740px) {
-
-		body {
-			margin: 0px;
-			padding: 0px;
-			/*width: 100vw;*/
-		}	
 	
-		#biophoto {
-			float: none;
-			margin: 20px auto;
-		}
 
-		.main-section {
-			max-width: 100%;
-			/*width: 100%;*/
-			margin: 0px;
-			border-radius: 0px;
-			padding: 30px 40px;
-		}
-
-		.main-section p {
-			margin: 0px;
-		}
-
-		#portGrid {
-			/*grid-template-columns: auto;
-			grid-template-rows: auto auto auto auto;*/
-		}
-
-
-		.portphoto {
-  			height: 320px;
-  			width: 400px;
-			grid-column: 1;
-		}
-		.photoCap {
-			grid-column: 1;
-		}
-
-		figure {
-  			width: 400px;
-			grid-column: 1;
-		}
-
-		figure img{
-			height: 320px;
-  			width: 400px;
-		}
 
 }
