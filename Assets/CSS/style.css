@@ -6,7 +6,7 @@ body {
 
 /* HEADER */
 	header {
-		background: #7F372C;
+		background: #102E7F;
 		padding: 32px 0;
 	}
 
@@ -26,7 +26,8 @@ body {
 		padding: 15px 10px;
 		margin: 0px;
 		text-align: center;
-		background: #FFB0A4;
+		background: #6C94FF;
+		opacity: .8;
 	}
 
 	.main-menu li {
@@ -118,7 +119,7 @@ body {
 
 /* FOOTER */
 	#footer {
-		background: #7F5852;
+		background: #364A7F;
 		text-align: center;
 		padding: 20px 0;
 	}
