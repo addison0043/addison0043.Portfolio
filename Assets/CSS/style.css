@@ -7,7 +7,7 @@ body {
 /* HEADER */
 	header {
 		background: #083c5d;
-		padding: 32px 0 20px 0;
+		padding: 32px 0;
 	}
 
 	header h1 {
@@ -54,10 +54,11 @@ body {
 /* MAIN CONTENT */
 	.main-body {
 		background: white;
-		padding: 30px 40px;
+		padding: 20px 40px 30px 40px;
 		margin: 10px auto;
 		max-width: 70%;
 		min-height: 300px;
+		text-align: center;
 	}
 
 	.main-body h1 {
@@ -71,6 +72,7 @@ body {
 		font-size: 18px;
 		line-height: 150%;
 		font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+		text-align: left;
 	}
 
 	#biophoto {
@@ -167,19 +169,18 @@ body {
 /*End of Grid*/
 
 
-/*Medium media query*/
-
-@media (max-width: 1200px) {
-	
-
-
-}
-/**/
-
 /*Small media query*/
 
 @media (max-width: 740px) {
 	
+	.main-body {
+		margin: 0px;
+		max-width: 100%;
+	}
 
+	#biophoto {
+		float: none;
+		margin: 0 auto;
+	}
 
 }
