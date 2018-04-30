@@ -18,7 +18,6 @@ body {
 		margin: 0px;
 		font-size: 45px;
 		line-height: 120%;
-		/*padding: 10px 0px;*/
 		color: white;
 		text-shadow: 2px 2px 2px #77c9d4;
 	}
@@ -147,6 +146,9 @@ body {
 /* End of FOOTER */
 
 
+
+
+
 /*Small media query*/
 
 @media (max-width: 740px) {
@@ -154,9 +156,11 @@ body {
 	.main-body {
 		margin: 0px;
 		max-width: 100%;
+	}
 
 	#biophoto {
 		float: none;
 		margin: 0 auto;
-    }
+	}
+
 }
