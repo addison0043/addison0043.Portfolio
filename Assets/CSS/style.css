@@ -1,110 +1,157 @@
-/*sets everything up in a grid layout*/
-
 body {
-	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  	font-size: 18px;
-  	line-height: 34px;
-  	padding: 0;
-	margin: 0;
   	background-image: url("../low_contrast_linen/low_contrast_linen.png");
-  	width: 100%;
+  	padding: 0;
+  	margin: 0;
 }
 
-#all {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	padding: 20px 50px;
-}
-
-/*Header*/
-
-header {
-	width: 100%;
-	height: 130px;
-	border-radius: 5px;
-	background-color: #083c5d;
-	display: grid;
-	grid-template-columns: 2fr 1fr;
-}
-
-#yourname {
-	width: 250px;
-	height: 100px;
-	box-shadow: 3px 3px 5px #77c9d4;
-	border-radius: 10px;
-	margin-left: 50px;
-	background-color: white;
-	grid-column: 1;
-	display: flex;
-	align-self: center;
-}
-
-#yourname h1 {
-	margin: auto;
-	line-height: 40px;
-}
-
-nav {
-	grid-column: 2;
-	display: grid;
-	grid-template-columns: auto auto;
-	margin-right: 5px;
-	color: gray;
-}
-
-nav h1 {
-	color: white;
-	font-size: 20px;
-	text-shadow: 1px 2px rgba(0,0,0,.6);
-}
-
-nav h1:hover {
-	color: #77c9d4;
-}
-
-	/*center nav links within grid cells*/
-	nav div {
-		display: flex;
+/* HEADER */
+	header {
+		background: #083c5d;
+		padding: 32px 0 20px 0;
 	}
 
-	nav div a {
-		margin: auto;
+	header h1 {
+		font-family: Georgia, Times, "Times New Roman", sans-serif;
+		text-transform: uppercase;
+		text-align: center;
+		letter-spacing: 4px;
+		margin: 0px;
+		font-size: 45px;
+		line-height: 120%;
+		/*padding: 10px 0px;*/
+		color: white;
+		text-shadow: 2px 2px 2px #77c9d4;
+	}
+
+	.main-menu {
+		padding: 15px 10px;
+		margin: 0px;
+		text-align: center;
+		background: #77c9d4;
+	}
+
+	.main-menu li {
+		display: inline;
+		padding: 0 20px 40px 20px;
+		font-size: 20px;
+		font-family: Georgia, Times, "Times New Roman", serif;
+		text-shadow: 2px 2px #083c5d;
+	}
+
+	.main-menu a {
 		text-decoration: none;
-		text-shadow: 1px 1px rgba(0,0,0,.6);
+		padding: 8px;
+		color: white;
 	}
-	/**/
 
-/*End of Header*/
+	.main-menu a:hover {
+		color: black;
+		text-shadow: none;
+		font-weight: 500;
+	}
+/* End of HEADER */
 
-/*font sytling*/
 
-h1, h2 {
-  font-family: Georgia, Times, "Times New Roman", serif;
-  font-weight: 700;
-  color: #083c5d;
-  text-shadow: 1px 2px rgba(119,201,212,.6);	
-}
+/* FOOTER */
+	#footer {
+		background: white;
+		text-align: center;
+		padding: 20px 0;
+	}
 
-h2 {
-	font-size: 25px;
-}
-/*End of font styling*/
+	#footer li {
+		display: inline-block;
+		padding: 0px;
+	}
+
+	.links {
+		padding: 0;
+		margin: 0;
+	}
+
+
+	.social {
+		height: 100px;
+		width: 100px;
+		border-radius: 20px;
+		padding: 20px;
+	}
+
+	.social:hover {
+		background-color: rgba(119,201,212, .5);
+	}
+/* End of FOOTER */
+
+/* MAIN CONTENT */
+	.main-body {
+		background: white;
+		padding: 30px 20px;
+		margin: 10px auto;
+		max-width: 80%;
+	}
+
+	.main-body h1 {
+		font-family: Georgia, Times, "Times New Roman", sans-serif;
+		text-transform: uppercase;
+		text-align: center;
+		letter-spacing: 4px;
+	}
+
+	.content-grid {
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	}
+
+	.grid-item {
+		
+	}
+
+	.grid-photo {
+		width: 100%;
+		border-radius:5px;
+		border: 1px solid black;
+	}
+
+	.grid-photo:hover {
+		box-shadow: 5px 5px 3px #77c9d4;
+	}	
+
+
+
+
+/* End of MAIN CONTENT */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Main section where content appears*/
 
 .main-section {
-	/*width: 50%;*/
+	max-width: 80%;
   	background: white;
   	box-shadow: 2px 2px 2px #77c9d4;
   	border: 1px solid black;
   	border-radius: 5px;
-  	padding: 20px;
+  	padding: 20px 30px 30px 20px;
+  	margin: 30px auto;
+  	text-align: center;
 }
 
 .main-section h1 {
-	text-align: left;
-	margin-left: 25px;
+	text-align: center;
+	/*margin-left: 25px;*/
 	font-size: 35px;	
 }	
 
@@ -123,45 +170,10 @@ h2 {
 
 /*End of main section*/
 
-/*"Connect With Me" / social media links */
+/*Social media links */
 
-.connectwithme {
-	background-color: white;
-	text-align: center;
-	box-shadow: 2px 2px 2px #77C9D4;
-	text-shadow: 1px 2px rgba(50, 140, 193,.6);
-	border: 1px solid black;
-	border-radius: 5px;
-	padding: 10px;
-	height: 200px;
-}
 
-#connectGrid {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-}
 
-.connectwithme h2 {
-	font-size: 30px;
-	margin: 20px auto;
-}
-
-.social {
-	height: 75px;
-	width: 75px;
-	border-radius: 20px;
-	padding: 20px;
-}
-
-.social:hover {
-	background-color: rgba(119,201,212, .5);
-}
-
-.icon {
-	flex: 1;
-}
 /*End of Connect With Me/Social Links*/
 
 /*Creates grid on portfolio page*/
@@ -240,23 +252,6 @@ a {
 
 /*End of Grid*/
 
-/*Footer*/
-
-footer {
-	width: 100%;
-	background: #083c5d;
-	color: #ebebeb;
-	font-family: serif;
-	border-top: 8px solid #77c9d4;
-	height: 100px;
-	display: flex;
-	margin-top: 20px;
-}
-
-footer div {
-	margin: auto;
-}
-/**/
 
 /*Medium media query*/
 
@@ -269,48 +264,61 @@ footer div {
 	}
 
 	.main-section {
-		width: 70%;
-		margin: 10px auto;
+		/*width: 70%;*/
+		/*margin: 10px auto;*/
 	}
 
 	#portGrid {
-		grid-gap: 30px;
+		/*grid-gap: 20px;*/
+		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 	}
 
 	.connectwithme {
-		width: 70%;
+		/*width: 70%;*/
 		margin: 10px auto;
 		height: auto;
 	}
 
-	.social {
-		height: 80px;
-		width: 80px;
-	}
+	/*.social {
+		height: 55px;
+		width: 55px;
+	}*/
 
 }
 /**/
 
 /*Small media query*/
 
-@media (max-width: 720px) {
+@media (max-width: 740px) {
+
+		body {
+			margin: 0px;
+			padding: 0px;
+			/*width: 100vw;*/
+		}	
+	
+		#biophoto {
+			float: none;
+			margin: 20px auto;
+		}
 
 		.main-section {
-			width: 410px;
+			max-width: 100%;
+			/*width: 100%;*/
+			margin: 0px;
+			border-radius: 0px;
+			padding: 30px 40px;
 		}
+
+		.main-section p {
+			margin: 0px;
+		}
+
 		#portGrid {
-			grid-template-columns: auto;
-			grid-template-rows: auto auto auto auto;
+			/*grid-template-columns: auto;
+			grid-template-rows: auto auto auto auto;*/
 		}
 
-		nav {
-			grid-template-columns: auto;
-			grid-template-rows: auto auto;
-		}
-
-		#all h1 {
-			text-align: center;
-		}
 
 		.portphoto {
   			height: 320px;
