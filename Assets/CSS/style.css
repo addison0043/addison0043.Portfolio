@@ -100,7 +100,7 @@ body {
 	.content-grid {
 		display: grid;
 		grid-gap: 20px;
-		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
 	}
 
 	.grid-item {
@@ -117,7 +117,9 @@ body {
 		box-shadow: 5px 5px 3px #77c9d4;
 	}	
 
-
+	.squareCorners {
+		border-radius: 0px;
+	}
 
 
 /* End of MAIN CONTENT */
@@ -199,11 +201,6 @@ body {
 	height: 100%;
 	border-radius: 10px;
 	border: 1.5px solid black;
-}
-
-.squareCorners {
-	border-radius: 0px;
-	box-shadow: 5px 5px 2px rgba(0,0,0,.6);
 }
 
 figcaption {
