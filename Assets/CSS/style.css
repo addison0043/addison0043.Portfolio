@@ -63,6 +63,7 @@ body {
 
 	.main-body h1 {
 		font-family: Georgia, Times, "Times New Roman", sans-serif;
+		color: #1949CC;
 		text-transform: uppercase;
 		text-align: center;
 		letter-spacing: 4px;
@@ -114,6 +115,7 @@ body {
 
 	figcaption a {
 		color: red;
+		text-decoration: none;
 	}
 /* End of MAIN CONTENT */
 
