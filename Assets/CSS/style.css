@@ -144,7 +144,7 @@ body {
 	}
 
 	.social:hover {
-		background-color: rgba(119,201,212, .5);
+		filter: drop-shadow(2px 2px 6px red);
 	}
 /* End of FOOTER */
 
