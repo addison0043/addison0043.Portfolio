@@ -7,7 +7,7 @@ body {
 /* HEADER */
 	header {
 		background: #102E7F;
-		padding: 32px 0;
+		padding: 32px 0;		
 	}
 
 	header h1 {
@@ -21,8 +21,8 @@ body {
 		color: white;		
 	}
 
-	.presentName {
-		animation: presentName .3s ease-in-out;
+	.headSlide {
+		animation: headSlide .4s ease-in-out;
 	}
 
 	.main-menu {
@@ -30,7 +30,11 @@ body {
 		margin: 0px;
 		text-align: center;
 		background: #6C94FF;
-		opacity: .8;
+		opacity: .8;		
+	}
+
+	.menuSlide {
+		animation: menuSlide .4s ease-in-out;
 	}
 
 	.main-menu li {
@@ -209,6 +213,26 @@ body {
 
 	100% {
 		opacity: 1;
+	}
+}
+
+@keyframes headSlide {
+	0% {
+		transform: translateX(100%);
+	}
+
+	100% {
+		transform: translateX(0px);
+	}
+}
+
+@keyframes menuSlide {
+	0% {
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(0px);
 	}
 }
 
