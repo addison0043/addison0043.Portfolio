@@ -118,6 +118,7 @@ body {
 		padding: 10px;
 		font-family: "Lucida Console", Monaco, monospace;
 		text-align: center;
+		animation: fadeIn .3s ease-in-out;
 	}
 
 	figcaption a {
@@ -188,6 +189,16 @@ body {
 	100% {
 		opacity: 1;
 		transform: translateX(0);
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
 	}
 }
 
