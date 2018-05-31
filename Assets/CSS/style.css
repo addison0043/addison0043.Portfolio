@@ -131,6 +131,10 @@ body {
 		color: red;
 		text-decoration: none;
 	}
+
+	figcaption a:hover {
+		color: #6C94FF;
+	}
 /* End of MAIN CONTENT */
 
 /* FOOTER */
