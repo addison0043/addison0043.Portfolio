@@ -18,7 +18,11 @@ body {
 		margin: 0px;
 		font-size: 45px;
 		line-height: 120%;
-		color: white;
+		color: white;		
+	}
+
+	.presentName {
+		animation: presentName .3s ease-in-out;
 	}
 
 	.main-menu {
@@ -66,6 +70,10 @@ body {
 		text-transform: uppercase;
 		text-align: center;
 		letter-spacing: 4px;
+	}
+
+	.slideLeft {
+		animation: slideLeft .3s ease-in-out;
 	}
 
 	.main-body p {
@@ -140,16 +148,50 @@ body {
 		width: 100px;
 		border-radius: 20px;
 		padding: 20px;
-		filter: drop-shadow(2px 2px 6px black);
 	}
 
 	.social:hover {
-		filter: drop-shadow(2px 2px 6px red);
+		filter: drop-shadow(0px 5px 10px red);
+		transform: translateY(-3px);
+	}
+
+	.social:active {
+		transform: translateY(-1px);
 	}
 /* End of FOOTER */
 
+/* Animations */
 
+@keyframes presentName {
+	0% {
+		opacity: 0;
+		transform: translateX(100px) rotate(-50deg);
+	}
 
+	80% {
+		opacity: .2;
+		/* transform: translateX(-10px); */
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0) rotate(0deg);
+	}
+}
+
+@keyframes slideLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(300px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+/* End of Animations */
 
 
 /*Small media query*/
