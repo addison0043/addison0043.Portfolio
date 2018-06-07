@@ -6,7 +6,7 @@ body {
 
 /* HEADER */
 	header {
-		background: #102E7F;
+		background-image: linear-gradient(to right, #102E7F 75%, #6D94FF);
 		padding: 32px 0;		
 	}
 
@@ -18,7 +18,7 @@ body {
 		margin: 0px;
 		font-size: 45px;
 		line-height: 120%;
-		color: white;		
+		color: white;
 	}
 
 	.headSlide {
@@ -75,6 +75,9 @@ body {
 		text-transform: uppercase;
 		text-align: center;
 		letter-spacing: 4px;
+		background-image: linear-gradient(to right, #102E7F, #6D94FF);
+		-webkit-background-clip: text;
+		color: transparent;
 	}
 
 	.slideLeft {
