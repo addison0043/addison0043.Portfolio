@@ -115,7 +115,7 @@ body {
 	}
 
 	.grid-photo:hover {
-		transform: translateY(-3px);
+		transform: translateY(-3px) scale(1.02);
 		box-shadow: 5px 5px 3px #77c9d4;
 	}
 
