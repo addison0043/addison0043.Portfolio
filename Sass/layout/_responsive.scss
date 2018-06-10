@@ -1,40 +1,19 @@
-// @media (max-width: 640px) {
-	
-// 	.main-body {
-// 		margin: 0;
-// 		width: auto;
-// 		padding: 2rem;
-
-// 		& p {
-// 			display: block;
-// 		}
-
-// 		&__content {
-// 			display: flex;
-// 			flex-direction: column-reverse;
-// 		}
-// 	}
-
-// 	#biophoto {
-// 		float: none;
-// 		width: 100%;
-// 		margin: 0 auto 2rem auto;
-// 		display: block;
-// 	}
-
-// }
-
 @media (max-width: 640px) {
 	
+	.bio__content,
 	.main-body {
-		margin: 0px;
-		width: auto;
+		margin: 0 !important;
+		width: auto !important;
 	}
 
 	#biophoto {
 		width: 90%;
 		float: none;
 		margin: 0 auto 1.5rem auto;
+	}
+
+	header h1 {
+		font-size: $font-size-lg;
 	}
 
 }

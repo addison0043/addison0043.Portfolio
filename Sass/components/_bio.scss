@@ -1,4 +1,4 @@
-.main-body {
+.bio__content {
     background: white;
     padding: 2rem 4rem;
     margin: 1rem auto;
@@ -6,18 +6,6 @@
     text-align: center;
     animation: swoopDown .2s ease-in-out;
 
-    & h1 {
-        font-family: 'Do Hyeon', sans-serif;
-        font-size: $font-size-lg;
-        text-transform: uppercase;
-        text-align: center;
-        letter-spacing: 4px;
-        background-image: linear-gradient(to right, #102E7F, #6D94FF);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        margin: 2rem auto;
-    }
 
     // &__content {
     //     display: table-row;
@@ -31,12 +19,7 @@
     // }
 
    
-    & p {
-        font-size: $font-size-def;
-        line-height: 150%;
-        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-        text-align: left;
-    }
+    
 }
 
 #biophoto {
