@@ -1,0 +1,29 @@
+.content-grid {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(27.5em, 1fr));
+}
+
+.grid-item {
+    animation: fadeIn .4s ease-in;
+}
+
+.grid-photo {
+    width: 100%;
+    border-radius:.5rem;
+    border: $border-black;
+
+    &:hover {
+        transform: translateY(-.3rem) scale(1.02);
+        box-shadow: .5rem .5rem .3rem #77c9d4;
+    }
+
+    &:active {
+        transform: translateY(-.1rem);
+    }
+}
+
+
+
+
+

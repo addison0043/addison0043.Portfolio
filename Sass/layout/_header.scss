@@ -1,0 +1,43 @@
+header {
+    background-image: linear-gradient(to top, #102E7F, #6D94FF);
+    padding: 3.2rem 0;		
+
+    & h1 {
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: .4rem;
+        margin: 0;
+        font-size: $font-size-xl;
+        line-height: 120%;
+        color: white;
+    }
+}
+
+.main-menu {
+    padding: 1.5rem 1rem;
+    margin: 0;
+    text-align: center;
+    background: #6C94FF;
+    opacity: .8;
+    
+    & li {
+        display: inline;
+        padding: 0 2rem 4rem 2rem;
+        font-size: 3rem;
+        font-family: 'Oswald', sans-serif;
+        text-shadow: .2rem .2rem #083c5d;
+    }
+
+    & a {
+        text-decoration: none;
+        padding: .8rem;
+        color: white;
+    }
+    
+    & a:hover {
+        color: black;
+        text-shadow: none;
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "addison0043.portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss Assets/CSS/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/addison0043/addison0043.Portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/addison0043/addison0043.Portfolio/issues"
+  },
+  "homepage": "https://github.com/addison0043/addison0043.Portfolio#readme",
+  "dependencies": {
+    "node-sass": "^4.9.0"
+  }
+}
