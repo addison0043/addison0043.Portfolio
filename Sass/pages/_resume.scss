@@ -1,0 +1,128 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-image: url("../low_contrast_linen/low_contrast_linen.png");
+    padding: 0;
+    margin: 0;
+}
+
+$font-head: 'Quicksand', sans-serif;
+$font-subhead: 'Source Code Pro', monospace;
+$font-text: 'Rubik', sans-serif;
+$font-info: 'IBM Plex Mono', monospace;
+
+$color-primary: #0487bd;
+$color-primary-light: #c2eaf4;
+$color-grey-light: #dde0e1;
+$color-grey-dark: #a0a0a0;
+
+$border-standard: 1px solid black;
+
+.container {
+    border: 1.5rem solid $color-grey-dark;
+    width: 120rem;
+    margin: 0 auto;
+}
+
+.section {
+    display: flex;
+
+    &__info,
+    &__res {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__info {
+        background-color: $color-primary;
+        padding: 2rem;
+        flex: 40%;
+    }
+
+    &__res {
+        padding: 3rem;
+        flex: 60%;
+
+        &--name,
+        &--title {
+            align-self: center;
+            font-family: $font-head;
+            line-height: 100%;          
+        }
+        
+        &--name {
+            font-size: 7rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: black;
+        }
+
+        &--title {
+            color: $color-primary;
+            font-size: 3.5rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+
+        &--link {
+            background-color: $color-grey-light;
+            padding: 1rem;
+            border: $border-standard;
+            border-radius: 5px;       
+            margin-bottom: 1rem;
+            align-self: center;
+
+                & a {
+                    font-family: $font-head;
+                    font-size: 1.5rem;
+                    color: $color-primary;
+                    text-decoration: none;
+                    align-self: center;
+                }
+
+                &-icon {
+                    width: 4rem;
+                    height: 4rem;
+                    margin-right: 1rem;
+                }
+            
+            display: flex;         
+        }
+        // End of &--link
+
+        &--subtitle {
+            margin-top: 2rem;
+            display: flex;
+
+            &-icon {
+                background-color: $color-primary-light;
+                border-radius: 50%;
+                padding: 1.5rem;
+                border: $border-standard;
+                margin-right: 4rem;
+
+                & img {
+                    width: 8rem;
+                }
+            }
+
+            & h2 {
+                font-size: 5.5rem;
+                font-family: $font-subhead;
+                color: $color-primary;
+                font-weight: 400;
+                align-self: center;
+            }
+        }
+    }
+    // End of &__res
+    
+}

@@ -4,7 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss Assets/CSS/style.css -w"
+    "watch:sass": "node-sass Sass/main.scss Assets/CSS/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    
+    "watch:resume": "node-sass Sass/res-style.scss Assets/CSS/res-style.css -w",
+    "res-server": "live-server",
+    "res-start": "npm-run-all --parallel res-server watch:resume",
+    
+    "compile:sass": "node-sass Sass/main.scss Assets/CSS/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' Assets/CSS/style.comp.css -o Assets/CSS/style.prefix.css",
+    "compress:css": "node-sass Assets/CSS/style.prefix.css Assets/CSS/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
   "repository": {
     "type": "git",
@@ -18,5 +29,12 @@
   "homepage": "https://github.com/addison0043/addison0043.Portfolio#readme",
   "dependencies": {
     "node-sass": "^4.9.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "concat": "^1.0.3",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.1.1",
+    "postcss-cli": "^4.1.1"
   }
 }
