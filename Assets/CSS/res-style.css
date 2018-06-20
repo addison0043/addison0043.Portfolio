@@ -4,6 +4,7 @@
   box-sizing: inherit; }
 
 html {
+  box-sizing: border-box;
   font-size: 62.5%; }
 
 body {
@@ -15,6 +16,13 @@ body {
   width: 120rem;
   margin: 0 auto;
   display: flex; }
+  @media only screen and (max-width: 74em) {
+    .container {
+      width: 100vw;
+      border: none; } }
+  @media only screen and (max-width: 53.5em) {
+    .container {
+      flex-direction: column-reverse; } }
 
 .left {
   width: 40%;
@@ -22,34 +30,81 @@ body {
   padding: 2rem 3rem;
   display: flex;
   flex-direction: column; }
+  @media only screen and (max-width: 63em) {
+    .left {
+      width: 40vw;
+      border-right: 1px solid black; } }
+  @media only screen and (max-width: 53.5em) {
+    .left {
+      width: 100vw;
+      border-right: none;
+      padding: 4rem 3rem 2rem 3rem;
+      background-color: #dde0e1; } }
   .left__header {
     height: 30rem;
     width: 100%;
     display: flex; }
+    @media only screen and (max-width: 53.5em) {
+      .left__header {
+        display: none; } }
     .left__header--img {
       border-radius: 50%;
       width: 20rem;
       height: 20rem;
       border: .5rem solid white;
       margin: auto; }
+      @media only screen and (max-width: 53.5em) {
+        .left__header--img {
+          display: none; } }
   .left__heading {
     display: flex;
     align-items: center; }
+    @media only screen and (max-width: 63em) {
+      .left__heading {
+        flex-direction: column; } }
     .left__heading img {
       width: 8rem;
       height: 8rem;
       margin-right: 2.5rem; }
+      @media only screen and (max-width: 74em) {
+        .left__heading img {
+          width: 6rem;
+          height: 6rem; } }
+      @media only screen and (max-width: 53.5em) {
+        .left__heading img {
+          width: 8rem;
+          height: 8rem; } }
     .left__heading h2 {
       font-family: "Source Code Pro", monospace;
       color: black;
-      font-size: 5rem;
-      font-weight: 500; }
+      font-size: 4.3rem;
+      font-weight: 500;
+      line-height: 1; }
+      @media only screen and (max-width: 74em) {
+        .left__heading h2 {
+          font-size: 3.8rem; } }
+      @media only screen and (max-width: 63em) {
+        .left__heading h2 {
+          font-size: 3.5rem; } }
+      @media only screen and (max-width: 53.5em) {
+        .left__heading h2 {
+          font-size: 6rem; } }
+      @media only screen and (max-width: 63em) {
+        .left__heading h2 {
+          text-align: center; } }
   .left__text {
     font-family: "IBM Plex Mono", monospace;
     color: white;
     font-size: 2.8rem;
     font-weight: 400;
     margin: 1rem 0 2rem 0; }
+    @media only screen and (max-width: 74em) {
+      .left__text {
+        font-size: 2.8rem; } }
+    @media only screen and (max-width: 53.5em) {
+      .left__text {
+        font-size: 3.5rem;
+        color: #0487bd; } }
     .left__text ul {
       margin-top: 2rem;
       list-style: none; }
@@ -61,6 +116,9 @@ body {
       width: 100%;
       display: flex;
       align-items: center; }
+      @media only screen and (max-width: 63em) {
+        .left__contact--item {
+          flex-direction: column; } }
       .left__contact--item:not(:last-child) {
         margin-bottom: 3rem; }
       .left__contact--item-icon {
@@ -68,13 +126,34 @@ body {
         .left__contact--item-icon img {
           width: 8rem;
           height: 8rem; }
+          @media only screen and (max-width: 74em) {
+            .left__contact--item-icon img {
+              width: 6rem;
+              height: 6rem; } }
+          @media only screen and (max-width: 53.5em) {
+            .left__contact--item-icon img {
+              width: 8rem;
+              height: 8rem; } }
       .left__contact--item-text {
         font-family: "IBM Plex Mono", monospace;
         color: white;
         font-size: 2.8rem;
         font-weight: 400;
-        font-size: 3.5rem;
+        font-size: 3.2rem;
         font-weight: 500; }
+        @media only screen and (max-width: 74em) {
+          .left__contact--item-text {
+            font-size: 2.8rem; } }
+        @media only screen and (max-width: 53.5em) {
+          .left__contact--item-text {
+            font-size: 3.5rem;
+            color: #0487bd; } }
+        @media only screen and (max-width: 74em) {
+          .left__contact--item-text {
+            font-size: 2.8rem; } }
+        @media only screen and (max-width: 53.5em) {
+          .left__contact--item-text {
+            font-size: 4rem; } }
   .left__skills {
     margin-top: auto; }
     .left__skills:not(:last-child) {
@@ -85,9 +164,23 @@ body {
   padding: 2rem 3rem;
   display: flex;
   flex-direction: column; }
+  @media only screen and (max-width: 63em) {
+    .right {
+      width: 60vw;
+      padding: 2rem 0 0 0; } }
+  @media only screen and (max-width: 63em) {
+    .right {
+      width: 100vw; } }
+  @media only screen and (max-width: 53.5em) {
+    .right {
+      background-color: #dde0e1; } }
   .right__header {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    padding: 0 2rem; }
+    @media only screen and (max-width: 74em) {
+      .right__header {
+        text-align: center; } }
     .right__header--name, .right__header--title {
       align-self: center;
       font-family: "Quicksand", sans-serif;
@@ -95,7 +188,7 @@ body {
     .right__header--name {
       font-size: 7rem;
       font-weight: bold;
-      margin-bottom: 1.5rem;
+      margin: 0 0 1.5rem 0;
       color: black; }
     .right__header--title {
       color: #0487bd;
@@ -110,25 +203,53 @@ body {
       margin-bottom: 1rem;
       align-self: center;
       display: flex; }
+      @media only screen and (max-width: 53.5em) {
+        .right__header--link {
+          background-color: transparent;
+          border: none; } }
       .right__header--link a {
         font-family: "Quicksand", sans-serif;
         font-size: 1.5rem;
         color: #0487bd;
         text-decoration: none;
         align-self: center; }
+        @media only screen and (max-width: 63em) {
+          .right__header--link a {
+            font-size: 1.2rem; } }
+        @media only screen and (max-width: 53.5em) {
+          .right__header--link a {
+            font-size: 1.8rem; } }
       .right__header--link-icon {
         width: 4rem;
         height: 4rem;
         margin-right: 1rem; }
+        @media only screen and (max-width: 63em) {
+          .right__header--link-icon {
+            width: 3rem;
+            height: 3rem; } }
+        @media only screen and (max-width: 53.5em) {
+          .right__header--link-icon {
+            width: 5rem;
+            height: 5rem; } }
   .right__subsection {
     display: flex;
     margin: 2rem 0 0 0; }
+    @media only screen and (max-width: 63em) {
+      .right__subsection {
+        flex-direction: column;
+        text-align: center;
+        margin: 2rem auto 0 auto; } }
     .right__subsection--icon {
       background-color: #c2eaf4;
       border-radius: 50%;
       border: 1px solid black;
       padding: 1.5rem;
       margin-right: 5rem; }
+      @media only screen and (max-width: 63em) {
+        .right__subsection--icon {
+          background-color: transparent;
+          border: none;
+          padding: 0; } }
       .right__subsection--icon img {
         width: 8rem; }
     .right__subsection--headline {
@@ -143,13 +264,27 @@ body {
     display: flex;
     align-items: center;
     margin: 0 0 2rem 0; }
+    @media only screen and (max-width: 63em) {
+      .right__listing--history {
+        flex-direction: column-reverse; } }
     .right__listing--history-date {
       width: 3rem;
       font-family: "Rubik", sans-serif;
       font-size: 3rem; }
+      @media only screen and (max-width: 63em) {
+        .right__listing--history-date {
+          width: auto;
+          font-size: 4rem; } }
+      @media only screen and (max-width: 53.5em) {
+        .right__listing--history-date {
+          width: auto;
+          font-size: 5rem; } }
     .right__listing--history-logo {
       margin: 0 auto;
       width: 30rem; }
+      @media only screen and (max-width: 63em) {
+        .right__listing--history-logo {
+          margin: 0 auto 2rem auto; } }
       .right__listing--history-logo img {
         width: 100%; }
   .right__listing--description {
@@ -157,6 +292,15 @@ body {
     border-radius: 1rem;
     color: white;
     font-family: "Rubik", sans-serif; }
+    @media only screen and (max-width: 63em) {
+      .right__listing--description {
+        width: 100%;
+        border-radius: 0;
+        word-break: normal;
+        word-wrap: normal; } }
+    @media only screen and (max-width: 53.5em) {
+      .right__listing--description {
+        padding: 2rem 3rem; } }
     .right__listing--description h2 {
       font-size: 4rem;
       font-weight: 400;
@@ -173,3 +317,7 @@ body {
 .divider {
   width: 85%;
   margin: 0 0 3rem auto; }
+  @media only screen and (max-width: 63em) {
+    .divider {
+      width: 90%;
+      margin: 0 auto 3rem auto; } }
