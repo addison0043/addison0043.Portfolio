@@ -7,42 +7,102 @@ html {
   font-size: 62.5%; }
 
 body {
-  background-image: url("../low_contrast_linen/low_contrast_linen.png");
   padding: 0;
   margin: 0; }
 
 .container {
   border: 1.5rem solid #a0a0a0;
   width: 120rem;
-  margin: 0 auto; }
-
-.section {
+  margin: 0 auto;
   display: flex; }
-  .section__info, .section__res {
+
+.left {
+  width: 40%;
+  background-color: #0487bd;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column; }
+  .left__header {
+    height: 30rem;
+    width: 100%;
+    display: flex; }
+    .left__header--img {
+      border-radius: 50%;
+      width: 20rem;
+      height: 20rem;
+      border: .5rem solid white;
+      margin: auto; }
+  .left__heading {
+    display: flex;
+    align-items: center; }
+    .left__heading img {
+      width: 8rem;
+      height: 8rem;
+      margin-right: 2.5rem; }
+    .left__heading h2 {
+      font-family: "Source Code Pro", monospace;
+      color: black;
+      font-size: 5rem;
+      font-weight: 500; }
+  .left__text {
+    font-family: "IBM Plex Mono", monospace;
+    color: white;
+    font-size: 2.8rem;
+    font-weight: 400;
+    margin: 1rem 0 2rem 0; }
+    .left__text ul {
+      margin-top: 2rem;
+      list-style: none; }
+    .left__text li:not(:last-child) {
+      margin-bottom: 1rem; }
+  .left__contact {
+    margin: 5rem 0; }
+    .left__contact--item {
+      width: 100%;
+      display: flex;
+      align-items: center; }
+      .left__contact--item:not(:last-child) {
+        margin-bottom: 3rem; }
+      .left__contact--item-icon {
+        margin-right: 2rem; }
+        .left__contact--item-icon img {
+          width: 8rem;
+          height: 8rem; }
+      .left__contact--item-text {
+        font-family: "IBM Plex Mono", monospace;
+        color: white;
+        font-size: 2.8rem;
+        font-weight: 400;
+        font-size: 3.5rem;
+        font-weight: 500; }
+  .left__skills {
+    margin-top: auto; }
+    .left__skills:not(:last-child) {
+      margin-bottom: 3rem; }
+
+.right {
+  width: 60%;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column; }
+  .right__header {
     display: flex;
     flex-direction: column; }
-  .section__info {
-    background-color: #0487bd;
-    padding: 2rem;
-    flex: 40%; }
-  .section__res {
-    padding: 3rem;
-    flex: 60%; }
-    .section__res--name, .section__res--title {
+    .right__header--name, .right__header--title {
       align-self: center;
       font-family: "Quicksand", sans-serif;
       line-height: 100%; }
-    .section__res--name {
+    .right__header--name {
       font-size: 7rem;
       font-weight: bold;
       margin-bottom: 1.5rem;
       color: black; }
-    .section__res--title {
+    .right__header--title {
       color: #0487bd;
       font-size: 3.5rem;
       font-weight: 500;
       margin-bottom: 2rem; }
-    .section__res--link {
+    .right__header--link {
       background-color: #dde0e1;
       padding: 1rem;
       border: 1px solid black;
@@ -50,30 +110,66 @@ body {
       margin-bottom: 1rem;
       align-self: center;
       display: flex; }
-      .section__res--link a {
+      .right__header--link a {
         font-family: "Quicksand", sans-serif;
         font-size: 1.5rem;
         color: #0487bd;
         text-decoration: none;
         align-self: center; }
-      .section__res--link-icon {
+      .right__header--link-icon {
         width: 4rem;
         height: 4rem;
         margin-right: 1rem; }
-    .section__res--subtitle {
-      margin-top: 2rem;
-      display: flex; }
-      .section__res--subtitle-icon {
-        background-color: #c2eaf4;
-        border-radius: 50%;
-        padding: 1.5rem;
-        border: 1px solid black;
-        margin-right: 4rem; }
-        .section__res--subtitle-icon img {
-          width: 8rem; }
-      .section__res--subtitle h2 {
-        font-size: 5.5rem;
-        font-family: "Source Code Pro", monospace;
-        color: #0487bd;
-        font-weight: 400;
-        align-self: center; }
+  .right__subsection {
+    display: flex;
+    margin: 2rem 0 0 0; }
+    .right__subsection--icon {
+      background-color: #c2eaf4;
+      border-radius: 50%;
+      border: 1px solid black;
+      padding: 1.5rem;
+      margin-right: 5rem; }
+      .right__subsection--icon img {
+        width: 8rem; }
+    .right__subsection--headline {
+      font-family: "Source Code Pro", monospace;
+      color: #0487bd;
+      font-weight: 400;
+      font-size: 5rem;
+      align-self: center; }
+  .right__listing:not(:last-child) {
+    margin-bottom: 2rem; }
+  .right__listing--history {
+    display: flex;
+    align-items: center;
+    margin: 0 0 2rem 0; }
+    .right__listing--history-date {
+      width: 3rem;
+      font-family: "Rubik", sans-serif;
+      font-size: 3rem; }
+    .right__listing--history-logo {
+      margin: 0 auto;
+      width: 30rem; }
+      .right__listing--history-logo img {
+        width: 100%; }
+  .right__listing--description {
+    padding: 2rem;
+    border-radius: 1rem;
+    color: white;
+    font-family: "Rubik", sans-serif; }
+    .right__listing--description h2 {
+      font-size: 4rem;
+      font-weight: 400;
+      margin-bottom: 1rem; }
+    .right__listing--description ul {
+      list-style: none;
+      font-weight: 300;
+      font-size: 2rem;
+      line-height: 1.5;
+      letter-spacing: .5px; }
+    .right__listing--description li:not(:last-child) {
+      margin-bottom: 1rem; }
+
+.divider {
+  width: 85%;
+  margin: 0 0 3rem auto; }

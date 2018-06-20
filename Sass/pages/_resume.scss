@@ -9,7 +9,6 @@ html {
 }
 
 body {
-    background-image: url("../low_contrast_linen/low_contrast_linen.png");
     padding: 0;
     margin: 0;
 }
@@ -26,30 +25,138 @@ $color-grey-dark: #a0a0a0;
 
 $border-standard: 1px solid black;
 
+@mixin left-h2 {
+    font-family: $font-subhead;
+    color: black;
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+@mixin left-text {
+    font-family: $font-info;
+    color: white;
+    font-size: 2.8rem;
+    font-weight: 400;
+}
+
+@mixin left-icon {
+    width: 8rem;
+    height: 8rem;
+}
+
 .container {
     border: 1.5rem solid $color-grey-dark;
     width: 120rem;
     margin: 0 auto;
+
+    display: flex;
 }
 
-.section {
-    display: flex;
+.left {
+    width: 40%;
+    background-color: $color-primary;
+    padding: 2rem 3rem;
 
-    &__info,
-    &__res {
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+
+        height: 30rem;
+        width: 100%;
+        display: flex;
+
+        &--img {
+            border-radius: 50%;
+            width: 20rem;
+            height: 20rem;
+            border: .5rem solid white;
+            margin: auto;
+        }
+    }
+    // End of &__header
+
+    &__heading {
+
+        display: flex;
+        align-items: center;
+
+        & img {
+            @include left-icon;
+            margin-right: 2.5rem;
+        }
+
+        & h2 {
+            @include left-h2;
+        }
+    }
+    // End of &__heading
+
+    &__text {
+        @include left-text;
+        margin: 1rem 0 2rem 0;
+
+        & ul {
+            margin-top: 2rem;
+            list-style: none;
+        }
+
+        & li:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__contact {
+
+        margin: 5rem 0;
+
+        &--item {
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+
+            &-icon {
+                
+                margin-right: 2rem;
+
+                & img {
+                    @include left-icon;
+                }
+            }
+
+            &-text {
+                @include left-text;
+                font-size: 3.5rem;
+                font-weight: 500;
+            }
+        }
+    }
+
+    &__skills {
+
+        margin-top: auto;
+
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+    }
+}
+// End of .left
+
+.right {
+    width: 60%;
+    padding: 2rem 3rem;
+
+    display: flex;
+    flex-direction: column;
+
+    &__header {
         display: flex;
         flex-direction: column;
-    }
-    
-    &__info {
-        background-color: $color-primary;
-        padding: 2rem;
-        flex: 40%;
-    }
-
-    &__res {
-        padding: 3rem;
-        flex: 60%;
 
         &--name,
         &--title {
@@ -97,32 +204,94 @@ $border-standard: 1px solid black;
             display: flex;         
         }
         // End of &--link
+    }
+    // End of &__header
 
-        &--subtitle {
-            margin-top: 2rem;
+    &__subsection {
+
+        display: flex;
+            margin: 2rem 0 0 0;
+        
+        &--icon {
+            background-color: $color-primary-light;
+            border-radius: 50%;
+            border: $border-standard;
+            padding: 1.5rem;
+            margin-right: 5rem;
+             
+            & img {            
+                width: 8rem;
+            }
+        }
+        
+        &--headline {
+            font-family: $font-subhead;
+            color: $color-primary;
+            font-weight: 400;
+            font-size: 5rem;
+            align-self: center;
+        }
+    }
+    
+    &__listing {
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+
+        &--history {
+
             display: flex;
+            align-items: center;
+            margin: 0 0 2rem 0;
 
-            &-icon {
-                background-color: $color-primary-light;
-                border-radius: 50%;
-                padding: 1.5rem;
-                border: $border-standard;
-                margin-right: 4rem;
-
-                & img {
-                    width: 8rem;
-                }
+            &-date {
+                width: 3rem;
+                font-family: $font-text;
+                font-size: 3rem;
             }
 
+            &-logo {
+                margin: 0 auto;
+                width: 30rem;
+
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+
+        &--description {
+            padding: 2rem;
+            border-radius: 1rem;
+            color: white;
+            font-family: $font-text;
+
             & h2 {
-                font-size: 5.5rem;
-                font-family: $font-subhead;
-                color: $color-primary;
+                font-size: 4rem;
                 font-weight: 400;
-                align-self: center;
+                margin-bottom: 1rem;
+            }
+
+            & ul {
+                list-style: none;;
+                font-weight: 300;
+                font-size: 2rem;
+                line-height: 1.5;
+                letter-spacing: .5px;
+            }
+
+            & li:not(:last-child) {
+                margin-bottom: 1rem;
             }
         }
     }
-    // End of &__res
+    // End of &__listing
     
+}
+// End of .right
+
+.divider {
+    width: 85%;
+    margin: 0 0 3rem auto;
 }
