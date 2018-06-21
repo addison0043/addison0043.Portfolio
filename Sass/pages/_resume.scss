@@ -76,6 +76,30 @@ $border-standard: 1px solid black;
         }
 }
 
+@keyframes slideUp {
+	0% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 @mixin left-icon {
     width: 8rem;
     height: 8rem;
@@ -112,6 +136,7 @@ $border-standard: 1px solid black;
     width: 40%;
     background-color: $color-primary;
     padding: 2rem 3rem;
+    animation: slideUp .5s ease-in-out;
 
     display: flex;
     flex-direction: column;
@@ -252,6 +277,7 @@ $border-standard: 1px solid black;
 .right {
     width: 60%;
     padding: 2rem 3rem;
+    animation: slideDown .5s ease-in-out;
 
     display: flex;
     flex-direction: column;

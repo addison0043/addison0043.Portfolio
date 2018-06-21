@@ -11,6 +11,22 @@ body {
   padding: 0;
   margin: 0; }
 
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
 .container {
   border: 1.5rem solid #a0a0a0;
   width: 120rem;
@@ -28,6 +44,7 @@ body {
   width: 40%;
   background-color: #0487bd;
   padding: 2rem 3rem;
+  animation: slideUp .5s ease-in-out;
   display: flex;
   flex-direction: column; }
   @media only screen and (max-width: 63em) {
@@ -162,6 +179,7 @@ body {
 .right {
   width: 60%;
   padding: 2rem 3rem;
+  animation: slideDown .5s ease-in-out;
   display: flex;
   flex-direction: column; }
   @media only screen and (max-width: 63em) {
