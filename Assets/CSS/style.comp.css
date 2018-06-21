@@ -163,7 +163,10 @@ figcaption {
     margin-top: .5rem;
     font-size: 2.5rem;
     letter-spacing: -.2rem;
-    color: #6D94FF;
+    background-image: linear-gradient(to right, #6D94FF, #102E7F);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     font-family: 'Fira Mono', monospace; }
   .grid-photo:hover {
     transform: translateY(-0.3rem) scale(1.02);

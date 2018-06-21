@@ -20,7 +20,10 @@
         margin-top: .5rem;
         font-size: 2.5rem;
         letter-spacing: -.2rem;
-        color: $color-primary-light;
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
         font-family: 'Fira Mono', monospace;
     }
 
