@@ -11,12 +11,9 @@
 }
 
 .grid-photo {
-    width: 100%;
-    border-radius:.5rem;
-    border: $border-black;
-    transition: all .2s;
-   
-
+    
+    @include photoEl;
+    
     &--label {
         margin-top: .5rem;
         font-size: 2.5rem;
@@ -29,16 +26,30 @@
     }
 
     &:hover {
-        transform: translateY(-.3rem) scale(1.02);
-        box-shadow: .5rem .5rem .3rem #77c9d4;
+        @include gridHover;
     }
 
     &:active {
         transform: translateY(-.1rem);
     }
+
 }
 
+// Turns jpg's into gif's
 
+// Parent element
+.gif {
+    position: relative;
+}
 
+    .static {
+        position: absolute;
+    }
 
+    .gif:hover .static {
+        opacity: 0;
+    }
 
+    .gif:hover .active {
+        @include gridHover;
+    }

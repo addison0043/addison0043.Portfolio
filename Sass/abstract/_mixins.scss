@@ -1,6 +1,11 @@
-@mixin centerElement {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -80%);
+@mixin photoEl {
+    width: 100%;
+    border-radius:.5rem;
+    border: $border-black;
+    transition: transform .2s, box-shadow .2s;
+}
+
+@mixin gridHover {
+    transform: translateY(-.3rem) scale(1.02);
+    box-shadow: .5rem .5rem .3rem #77c9d4;
 }
