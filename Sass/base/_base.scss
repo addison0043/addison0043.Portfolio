@@ -9,7 +9,27 @@ html {
 }
 
 body {
-    background-image: url("../low_contrast_linen/low_contrast_linen.png");
     padding: 0;
     margin: 0;
+    
+    // background-image: 
+    //     linear-gradient(
+    //         to top,
+    //         rgba(#b5b7b8, .9), 
+    //         rgba(#b5b7b8, .6),
+    //         rgba(#777, .9)),
+    //     url("https://johnwulfert.com/wp-content/uploads/2016/11/20160420-seattle-skyline-dusk.jpg");
+    //     background-size: 100% 100%;
+    //     background-attachment: fixed;
+    
+
+    background-image: 
+        linear-gradient(
+            to top,
+            rgba(#b5b7b8, .8), 
+            transparent,
+            rgba(#777, .8)),
+        url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/HVFIk0gZeivb57aza/videoblocks-the-city-online-abstract-futuristic-digital-city-cloud-connected-high-tech-background-seamless-loop-network-digital-technology-concept_sgv5hthse_thumbnail-full01.png");
+        background-size: 100% 100%;
+        background-attachment: fixed;
 }

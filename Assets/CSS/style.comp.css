@@ -54,9 +54,11 @@ html {
   font-size: 62.5%; }
 
 body {
-  background-image: url("../low_contrast_linen/low_contrast_linen.png");
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  background-image: linear-gradient(to top, rgba(181, 183, 184, 0.8), transparent, rgba(119, 119, 119, 0.8)), url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/HVFIk0gZeivb57aza/videoblocks-the-city-online-abstract-futuristic-digital-city-cloud-connected-high-tech-background-seamless-loop-network-digital-technology-concept_sgv5hthse_thumbnail-full01.png");
+  background-size: 100% 100%;
+  background-attachment: fixed; }
 
 h1 {
   font-family: 'Do Hyeon', sans-serif;
@@ -206,7 +208,7 @@ header {
   margin: 0;
   text-align: center;
   background: #6C94FF;
-  opacity: .8; }
+  opacity: .95; }
   .main-menu li {
     display: inline;
     padding: 0 2rem 4rem 2rem;
