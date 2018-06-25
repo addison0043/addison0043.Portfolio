@@ -1,9 +1,12 @@
 @media (max-width: 640px) {
 	
 	.bio__content,
+	.main-body,
 	.main-body {
 		margin: 0 !important;
 		width: auto !important;
+		border-radius: 0;
+		border: none;
 	}
 
 	#biophoto {
@@ -14,6 +17,10 @@
 
 	header h1 {
 		font-size: $font-size-lg;
+	}
+
+	body {
+		background-size: cover;
 	}
 
 }

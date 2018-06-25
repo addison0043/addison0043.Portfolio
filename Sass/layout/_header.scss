@@ -18,7 +18,13 @@ header {
     padding: 1.5rem 1rem;
     margin: 0;
     text-align: center;
-    background: #6C94FF;
+    // background: #6C94FF;
+    background: 
+        linear-gradient(
+            to bottom,
+            rgba(#6C94FF, 1), 
+            rgba(#6C94FF, .95),
+            rgba(#6C94FF, .65));
     opacity: .95;
     
     & li {

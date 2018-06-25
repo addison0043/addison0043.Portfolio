@@ -100,6 +100,9 @@ p {
   margin: 1rem auto;
   width: 60rem;
   text-align: center;
+  border-radius: .3rem;
+  border: 1px solid black;
+  box-shadow: 2rem 2rem 5rem rgba(255, 165, 0, 0.5);
   animation: swoopDown .2s ease-in-out; }
 
 #biophoto {
@@ -124,7 +127,7 @@ figcaption {
     color: #6D94FF; }
 
 #footer {
-  background: #7F3F20;
+  background: linear-gradient(to top, #7f3f20, rgba(127, 63, 32, 0.95), rgba(127, 63, 32, 0.85));
   text-align: center;
   padding: 20px 0; }
   #footer li {
@@ -207,7 +210,7 @@ header {
   padding: 1.5rem 1rem;
   margin: 0;
   text-align: center;
-  background: #6C94FF;
+  background: linear-gradient(to bottom, #6c94ff, rgba(108, 148, 255, 0.95), rgba(108, 148, 255, 0.65));
   opacity: .95; }
   .main-menu li {
     display: inline;
@@ -226,15 +229,20 @@ header {
 
 @media (max-width: 640px) {
   .bio__content,
+  .main-body,
   .main-body {
     margin: 0 !important;
-    width: auto !important; }
+    width: auto !important;
+    border-radius: 0;
+    border: none; }
   #biophoto {
     width: 90%;
     float: none;
     margin: 0 auto 1.5rem auto; }
   header h1 {
-    font-size: 3.2rem !important; } }
+    font-size: 3.2rem !important; }
+  body {
+    background-size: cover; } }
 
 .main-body {
   background: white;
@@ -242,4 +250,7 @@ header {
   margin: 1rem auto;
   width: 70%;
   text-align: center;
+  border-radius: .3rem;
+  border: 1px solid black;
+  box-shadow: 2rem 2rem 5rem rgba(255, 165, 0, 0.5);
   animation: swoopDown .2s ease-in-out; }
