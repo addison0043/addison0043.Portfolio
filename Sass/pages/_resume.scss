@@ -140,6 +140,7 @@ $border-standard: 1px solid black;
 
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
 
         @include respond(med) {
             width: 40vw;
@@ -149,15 +150,12 @@ $border-standard: 1px solid black;
         @include respond(sm) {
             width: 100vw;
             border-right: none;
-            // border-top: $border-standard;
-            padding: 4rem 3rem 2rem 3rem;
+            padding: 0;
             background-color: $color-grey-light;
         }
 
     &__header {
 
-        height: 30rem;
-        width: 100%;
         display: flex;
         
             @include respond(sm) {
@@ -166,20 +164,28 @@ $border-standard: 1px solid black;
 
         &--img {
             border-radius: 50%;
-            width: 20rem;
-            height: 20rem;
+            width: 90%;
+            height: 90%;
             border: .5rem solid white;
-            margin: auto;
-
-                @include respond(sm) {
-                    display: none;
-                }
+            margin: -10rem auto 0 auto;
 
         }
     }
     // End of &__header
 
-    &__heading {
+    &__objective {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        @include respond(med) {
+            text-align: center;
+            align-items: center;
+        }
+        
+    }
+
+    &__heading, &__objective {
 
         display: flex;
         align-items: center;
@@ -191,6 +197,10 @@ $border-standard: 1px solid black;
         & img {
             @include left-icon;
             margin-right: 2.5rem;
+
+            @include respond(med) {
+                margin-right: 0;
+            }
         }
 
         & h2 {
@@ -219,8 +229,6 @@ $border-standard: 1px solid black;
 
     &__contact {
 
-        margin: 5rem 0;
-
         &--item {
             width: 100%;
             display: flex;
@@ -228,6 +236,10 @@ $border-standard: 1px solid black;
 
                 @include respond(med) {
                     flex-direction: column;
+                }
+
+                @include respond(sm) {
+                    flex-direction: row;
                 }
 
             &:not(:last-child) {
@@ -265,10 +277,23 @@ $border-standard: 1px solid black;
 
     &__skills {
 
-        margin-top: auto;
+        @include respond(med) {
+            text-align: center;
+        }
+    }
 
-        &:not(:last-child) {
-            margin-bottom: 3rem;
+    &__objective, &__contact, &__skills {
+        
+        @include respond(sm) {
+            background-color: rgba(#FF8940, .6);
+            padding: 2rem 3rem;
+        }
+    }
+    
+    &__objective, &__heading, &__contact, &__skills:not(:last-child) {
+        
+        @include respond(sm) {
+            margin: 0 0 5rem 0;
         }
     }
 }
@@ -319,8 +344,9 @@ $border-standard: 1px solid black;
         }
 
         &--title {
+            text-align: center;
             color: $color-primary;
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 500;
             margin-bottom: 2rem;
         }
@@ -336,6 +362,7 @@ $border-standard: 1px solid black;
                 @include respond(sm) {
                     background-color: transparent;
                     border: none;
+                    padding: 0;
                 }
 
                 & a {
@@ -393,7 +420,7 @@ $border-standard: 1px solid black;
             border-radius: 50%;
             border: $border-standard;
             padding: 1.5rem;
-            margin-right: 5rem;
+            margin-right: 1.6rem;
 
                 @include respond(med) {
                     background-color: transparent;
@@ -402,7 +429,7 @@ $border-standard: 1px solid black;
                 }
              
             & img {            
-                width: 8rem;
+                width: 4rem;
             }
         }
         
@@ -417,46 +444,26 @@ $border-standard: 1px solid black;
     
     &__listing {
 
-        &:not(:last-child) {
-            margin-bottom: 2rem;
-        }
-
         &--history {
 
             display: flex;
             align-items: center;
-            margin: 0 0 2rem 0;
+            margin: 0 0 1.5rem 0;
 
                 @include respond(med) {
                     flex-direction: column-reverse;
                 }
 
-            &-date {
-                width: 3rem;
-                font-family: $font-text;
-                font-size: 3rem;
-
-                    @include respond(med) {
-                        width: auto;
-                        font-size: 4rem;
-                    }
-
-                    @include respond(sm) {
-                        width: auto;
-                        font-size: 5rem;
-                    }
-            }
-
             &-logo {
                 margin: 0 auto;
-                width: 30rem;
+                height: 10rem;
 
                     @include respond(med) {
                         margin: 0 auto 2rem auto;
                     }
 
                 & img {
-                    width: 100%;
+                    height: 100%;
                 }
             }
         }
@@ -466,6 +473,7 @@ $border-standard: 1px solid black;
             border-radius: 1rem;
             color: white;
             font-family: $font-text;
+            margin: 0 0 3rem 0;
 
                 @include respond(med) {
                     width: 100%;
@@ -478,8 +486,12 @@ $border-standard: 1px solid black;
                     padding: 2rem 3rem;
                 }
 
+            & a {
+                text-decoration: none;
+            }
+            
             & h2 {
-                font-size: 4rem;
+                font-size: 3rem;
                 font-weight: 400;
                 margin-bottom: 1rem;
             }
@@ -504,7 +516,7 @@ $border-standard: 1px solid black;
 
 .divider {
     width: 85%;
-    margin: 0 0 3rem auto;
+    margin: 0 0 2rem auto;
 
         @include respond(med) {
             width: 90%;
