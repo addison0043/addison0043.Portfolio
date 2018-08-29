@@ -66,7 +66,7 @@ body {
   .left__icons {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    grid-gap: 20px; }
+    grid-gap: 30px; }
     .left__icons:not(:last-child) {
       margin: 0 0 5rem 0; }
     .left__icons--img {
