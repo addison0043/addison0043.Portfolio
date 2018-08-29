@@ -7,6 +7,10 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+
+    @media screen and (max-width: 800px) {
+        font-size: 50%;
+    }
 }
 
 body {
@@ -14,67 +18,24 @@ body {
     margin: 0;
 }
 
-$font-head: 'Quicksand', sans-serif;
-$font-subhead: 'Source Code Pro', monospace;
-$font-text: 'Rubik', sans-serif;
-$font-info: 'IBM Plex Mono', monospace;
+$quicksand: 'Quicksand', sans-serif;
+$source-code: 'Source Code Pro', monospace;
+$Rubik: 'Rubik', sans-serif;
+$IBM: 'IBM Plex Mono', monospace;
 
 $color-primary: #0487bd;
-$color-primary-light: #c2eaf4;
-$color-grey-light: #dde0e1;
-$color-grey-dark: #a0a0a0;
+$color-primary-light: #05b5ff;
+$color-grey: #c5c2c2;
+$color-grey-light: #dfdfdf;
+$color-white: #fff;
+$color-black: #000;
+
 
 $border-standard: 1px solid black;
+$drop-shadow: drop-shadow(5px 5px 4px rgba($color-white,.5));
+$hover-shadow: drop-shadow(5px 5px 4px rgba(red,.5));
+$outer-glow: 1px 1px 10px #fff, 1px 1px 10px #ccc;
 
-@mixin respond($breakpoint) {
-        // 753px, nah 856px
-    @if $breakpoint == sm {
-        @media only screen and (max-width: 53.5em) {@content}; 
-    }
-        // 1007px
-    @if $breakpoint == med {
-        @media only screen and (max-width: 63em) {@content};
-    }
-        // 1200px
-    @if $breakpoint == lg {
-        @media only screen and (max-width: 74em) {@content};
-    }
-}
-
-@mixin left-h2 {
-    font-family: $font-subhead;
-    color: black;
-    font-size: 4.3rem;
-    font-weight: 500;
-    line-height: 1;
-    
-        @include respond(lg) {
-            font-size: 3.8rem;
-        }
-        @include respond(med) {
-            font-size: 3.5rem;
-        }
-        @include respond(sm) {
-            font-size: 5rem;
-        }
-    
-}
-
-@mixin left-text {
-    font-family: $font-info;
-    color: white;
-    font-size: 2.8rem;
-    font-weight: 400;
-
-        @include respond(lg) {
-            font-size: 2.8rem;
-        }
-
-        @include respond(sm) {
-            font-size: 3.5rem;
-            color: $color-primary;
-        }
-}
 
 @keyframes slideUp {
 	0% {
@@ -100,426 +61,249 @@ $border-standard: 1px solid black;
 	}
 }
 
-@mixin left-icon {
-    width: 8rem;
-    height: 8rem;
-
-        @include respond(lg) {
-            width: 6rem;
-            height: 6rem;
-        }
-
-        @include respond(sm) {
-            width: 8rem;
-            height: 8rem;
-        }
-}
-
-.container {
-    border: 1.5rem solid $color-grey-dark;
+.all {
     width: 120rem;
-    margin: 0 auto;
+    text-align: center;
 
     display: flex;
 
-        @include respond(lg) {
-            width: 100vw;
-            border: none;
-        }
-
-        @include respond(sm) {
-            flex-direction: column-reverse;
-        }
+    @media (max-width: 120rem) {
+        width: 100vw;
+    }
 }
 
 .left {
     width: 40%;
-    background-color: $color-primary;
-    padding: 2rem 3rem;
+    padding: 10rem 5rem;
+    background: linear-gradient(to bottom, $color-primary, $color-primary-light);
     animation: slideUp .5s ease-in-out;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
 
-        @include respond(med) {
-            width: 40vw;
-            border-right: $border-standard;
+    &__img {
+        margin: auto;
+
+        & img {
+            width: 80%;
+            border-radius: 50%;
+            border: $border-standard;
+            box-shadow: $outer-glow;
         }
 
-        @include respond(sm) {
-            width: 100vw;
-            border-right: none;
-            padding: 0;
-            background-color: $color-grey-light;
+    }
+
+    &__heading {
+        font-family: $IBM;
+        font-size: 4.5rem;
+        font-weight: 600;
+        color: $color-black;
+        margin: 3rem auto 1rem auto;
+    }
+
+    &__text {
+        font-family: $source-code;
+        font-size: 2.6rem;
+        font-weight: 400;
+        color: $color-white;
+    }
+
+    &__icons {
+
+        &:not(:last-child) {
+            margin: 0 0 5rem 0;
         }
-
-    &__header {
-
-        display: flex;
         
-            @include respond(sm) {
-                display: none;
-            }
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        grid-gap: 20px;
 
         &--img {
-            border-radius: 50%;
-            width: 90%;
-            height: 90%;
-            border: .5rem solid white;
-            margin: -10rem auto 0 auto;
+            height: 10rem;
+
+            & img {
+                height: 100%;
+                filter: $drop-shadow;
+            }
 
         }
     }
-    // End of &__header
 
-    &__objective {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
-        @include respond(med) {
-            text-align: center;
-            align-items: center;
-        }
-        
-    }
-
-    &__heading, &__objective {
+    &__icon-text {
+        text-align: left;
+        margin: 0 0 5rem 0;
+        justify-self: flex-start;
 
         display: flex;
         align-items: center;
 
-            @include respond(med) {
-                flex-direction: column;
-            }
-
         & img {
-            @include left-icon;
-            margin-right: 2.5rem;
-
-            @include respond(med) {
-                margin-right: 0;
-            }
-        }
-
-        & h2 {
-            @include left-h2;
-
-                @include respond(med) {
-                    text-align: center;
-                }
-        }
-    }
-    // End of &__heading
-
-    &__text {
-        @include left-text;
-        margin: 1rem 0 2rem 0;
-
-        & ul {
-            margin-top: 2rem;
-            list-style: none;
-        }
-
-        & li:not(:last-child) {
-            margin-bottom: 1rem;
+            height: 8rem;
+            margin: 0 3rem 0 0;
         }
     }
 
-    &__contact {
-
-        &--item {
-            width: 100%;
-            display: flex;
-            align-items: center;
-
-                @include respond(med) {
-                    flex-direction: column;
-                }
-
-                @include respond(sm) {
-                    flex-direction: row;
-                }
-
-            &:not(:last-child) {
-                margin-bottom: 3rem;
-            }
-
-            &-icon {
-                
-                margin-right: 2rem;
-
-                & img {
-                    @include left-icon;
-                }
-            }
-
-            &-text {
-                @include left-text;
-                font-size: 3.2rem;
-                font-weight: 500;
-
-                    @include respond(lg) {
-                        font-size: 2.8rem;
-                    }
-
-                    // @include respond(med) {
-                    //     font-size: 2.8rem;
-                    // }
-
-                    @include respond(sm) {
-                        font-size: 4rem;
-                    }
-            }
-        }
-    }
-
-    &__skills {
-
-        @include respond(med) {
-            text-align: center;
-        }
-    }
-
-    &__objective, &__contact, &__skills {
-        
-        @include respond(sm) {
-            background-color: rgba(#FF8940, .6);
-            padding: 2rem 3rem;
-        }
-    }
-    
-    &__objective, &__heading, &__contact, &__skills:not(:last-child) {
-        
-        @include respond(sm) {
-            margin: 0 0 5rem 0;
-        }
+    & hr {
+        width: 100%;
+        color: $color-black;
+        margin: 0 0 5rem 0;
     }
 }
-// End of .left
 
 .right {
     width: 60%;
-    padding: 2rem 3rem;
+    padding: 10rem 5rem;
+    background: linear-gradient(to top, $color-grey-light, $color-white);
     animation: slideDown .5s ease-in-out;
 
-    display: flex;
-    flex-direction: column;
+    &__heading {
+        width: 100%;
+        border-bottom: 1px solid $color-grey;
+        padding: 0 0 2rem 0;
 
-        @include respond(med) {
-            width: 60vw;
-            padding: 2rem 0 0 0;
+        display: flex;
+
+        &:not(:first-child) {
+            margin: 5rem 0 0 0;
         }
 
-        @include respond(med) {
-            width: 100vw;
+        &--icon {
+            background-color: $color-grey;
+            border-radius: 50%;
+            width: 10rem;
+            height: auto;
+            padding-bottom: 10rem;
+            border: $border-standard;
+
+            position: relative;
+
+            & img {
+                width: 7rem;
+                margin: auto;
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                
+            }
         }
 
-        @include respond(sm) {
-            background-color: $color-grey-light;
-        }
+        &--text {
+            font-family: $IBM;
+            font-size: 5rem;
+            font-weight: 400;
+            color: $color-primary;
 
-    &__header {
+            margin: 0 0 0 3rem;
+            align-self: center;
+        }
+    }
+
+    &__listing {
+        margin: 5rem 0 0 0;       
+        
         display: flex;
         flex-direction: column;
-        padding: 0 2rem;
-
-        @include respond(lg) {
-            text-align: center;
-        }
-
-        &--name,
-        &--title {
-            align-self: center;
-            font-family: $font-head;
-            line-height: 100%;          
-        }
         
-        &--name {
-            font-size: 7rem;
-            font-weight: bold;
-            margin: 0 0 1.5rem 0;
-            color: black;
-        }
-
-        &--title {
-            text-align: center;
-            color: $color-primary;
-            font-size: 3rem;
-            font-weight: 500;
-            margin-bottom: 2rem;
-        }
-
-        &--link {
-            background-color: $color-grey-light;
-            padding: 1rem;
-            border: $border-standard;
-            border-radius: 5px;       
-            margin-bottom: 1rem;
+        &--logo {
+            height: 10rem;
             align-self: center;
+        }
 
-                @include respond(sm) {
-                    background-color: transparent;
-                    border: none;
-                    padding: 0;
-                }
+        &--box {
+            width: 100%;
+            padding: 2rem 2.5rem;
+            border-radius: 7px;
+            margin: 2rem 0 0 0;
+            text-align: left;
+            color: $color-white;
+
+            &---upwork {
+                background-color: #7edd56;
+            }
+
+            &---hupy {
+                background-color: #ce3f57;
+            }
+
+            &---northwestern {
+                background-color: #5e3b8e;
+            }
+
+            &---cuw {
+                background-color: #266da3;
+            }
+
+            &---title {
+                font-size: 2.8rem;
+                font-weight: 400;
+                font-family: $Rubik;
+                letter-spacing: 1px;
+                margin: 0 0 1.8rem 0;
+            }
+
+            &---text {
+                font-size: 2rem;
+                font-weight: 300;
+                font-family: $Rubik;
 
                 & a {
-                    font-family: $font-head;
-                    font-size: 1.5rem;
-                    color: $color-primary;
                     text-decoration: none;
-                    align-self: center;
 
-                        @include respond(med) {
-                            font-size: 1.2rem;
-                        }
-
-                        @include respond(sm) {
-                            font-size: 1.5rem;
-                            word-break: break-all;
-                        }
-                }
-
-                &-icon {
-                    width: 4rem;
-                    height: 4rem;
-                    margin-right: 1rem;
-
-                        @include respond(med) {
-                            width: 3rem;
-                            height: 3rem;
-                        }
-
-                        @include respond(sm) {
-                            width: 4rem;
-                            height: 4rem;
-                        }
-                }
-            
-            display: flex;         
-        }
-        // End of &--link
-    }
-    // End of &__header
-
-    &__subsection {
-
-        display: flex;
-        margin: 2rem 0 0 0;
-
-            @include respond(med) {
-                flex-direction: column;
-                text-align: center;
-                margin: 2rem auto 0 auto;
-            }
-        
-        &--icon {
-            background-color: $color-primary-light;
-            border-radius: 50%;
-            border: $border-standard;
-            padding: 1.5rem;
-            margin-right: 1.6rem;
-
-                @include respond(med) {
-                    background-color: transparent;
-                    border: none;
-                    padding: 0;
-                }
-             
-            & img {            
-                width: 4rem;
-            }
-        }
-        
-        &--headline {
-            font-family: $font-subhead;
-            color: $color-primary;
-            font-weight: 400;
-            font-size: 5rem;
-            align-self: center;
-        }
-    }
-    
-    &__listing {
-
-        &--history {
-
-            display: flex;
-            align-items: center;
-            margin: 0 0 1.5rem 0;
-
-                @include respond(med) {
-                    flex-direction: column-reverse;
-                }
-
-            &-logo {
-                margin: 0 auto;
-                height: 10rem;
-
-                    @include respond(med) {
-                        margin: 0 auto 2rem auto;
+                    &:hover {
+                        text-decoration: underline;
                     }
+                }
 
-                & img {
-                    height: 100%;
+                & span {
+                    font-weight: 600;
+                    color: $color-black;
                 }
             }
         }
+    }
+}
 
-        &--description {
-            padding: 2rem;
-            border-radius: 1rem;
-            color: white;
-            font-family: $font-text;
+.live-links {
+
+    &:hover {
+        filter: $hover-shadow;
+        transform: scale(1.05);
+    }
+    &:active {
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    
+    .left {
+        padding: 5rem 2rem;
+
+        &__icon-text {
+            flex-direction: column;
+            text-align: center;
+
             margin: 0 0 3rem 0;
 
-                @include respond(med) {
-                    width: 100%;
-                    border-radius: 0;
-                    word-break: normal;
-                    word-wrap: normal;
-                }
-
-                @include respond(sm) {
-                    padding: 2rem 3rem;
-                }
-
-            & a {
-                text-decoration: none;
-            }
-            
-            & h2 {
-                font-size: 3rem;
-                font-weight: 400;
-                margin-bottom: 1rem;
-            }
-
-            & ul {
-                list-style: none;;
-                font-weight: 300;
-                font-size: 2rem;
-                line-height: 1.5;
-                letter-spacing: .5px;
-            }
-
-            & li:not(:last-child) {
-                margin-bottom: 1rem;
+            & img {
+                margin: 0 0 2rem 0;
             }
         }
     }
-    // End of &__listing
-    
+
+    .right {
+        padding: 5rem 2rem;
+    }
 }
-// End of .right
 
-.divider {
-    width: 85%;
-    margin: 0 0 2rem auto;
-
-        @include respond(med) {
-            width: 90%;
-            margin: 0 auto 3rem auto;
-        }
+@media screen and (max-width: 650px) {
+    .all {
+        flex-direction: column;
+    }
+    
+    .left, .right {
+        width: 100vw;
+    }
 }

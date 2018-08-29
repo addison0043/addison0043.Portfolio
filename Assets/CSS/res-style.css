@@ -6,6 +6,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media screen and (max-width: 800px) {
+    html {
+      font-size: 50%; } }
 
 body {
   padding: 0;
@@ -27,321 +30,159 @@ body {
     opacity: 1;
     transform: translateY(0); } }
 
-.container {
-  border: 1.5rem solid #a0a0a0;
+.all {
   width: 120rem;
-  margin: 0 auto;
+  text-align: center;
   display: flex; }
-  @media only screen and (max-width: 74em) {
-    .container {
-      width: 100vw;
-      border: none; } }
-  @media only screen and (max-width: 53.5em) {
-    .container {
-      flex-direction: column-reverse; } }
+  @media (max-width: 120rem) {
+    .all {
+      width: 100vw; } }
 
 .left {
   width: 40%;
-  background-color: #0487bd;
-  padding: 2rem 3rem;
+  padding: 10rem 5rem;
+  background: linear-gradient(to bottom, #0487bd, #05b5ff);
   animation: slideUp .5s ease-in-out;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly; }
-  @media only screen and (max-width: 63em) {
-    .left {
-      width: 40vw;
-      border-right: 1px solid black; } }
-  @media only screen and (max-width: 53.5em) {
-    .left {
-      width: 100vw;
-      border-right: none;
-      padding: 0;
-      background-color: #dde0e1; } }
-  .left__header {
-    display: flex; }
-    @media only screen and (max-width: 53.5em) {
-      .left__header {
-        display: none; } }
-    .left__header--img {
+  flex-direction: column; }
+  .left__img {
+    margin: auto; }
+    .left__img img {
+      width: 80%;
       border-radius: 50%;
-      width: 90%;
-      height: 90%;
-      border: .5rem solid white;
-      margin: -10rem auto 0 auto; }
-  .left__objective {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; }
-    @media only screen and (max-width: 63em) {
-      .left__objective {
-        text-align: center;
-        align-items: center; } }
-  .left__heading, .left__objective {
-    display: flex;
-    align-items: center; }
-    @media only screen and (max-width: 63em) {
-      .left__heading, .left__objective {
-        flex-direction: column; } }
-    .left__heading img, .left__objective img {
-      width: 8rem;
-      height: 8rem;
-      margin-right: 2.5rem; }
-      @media only screen and (max-width: 74em) {
-        .left__heading img, .left__objective img {
-          width: 6rem;
-          height: 6rem; } }
-      @media only screen and (max-width: 53.5em) {
-        .left__heading img, .left__objective img {
-          width: 8rem;
-          height: 8rem; } }
-      @media only screen and (max-width: 63em) {
-        .left__heading img, .left__objective img {
-          margin-right: 0; } }
-    .left__heading h2, .left__objective h2 {
-      font-family: "Source Code Pro", monospace;
-      color: black;
-      font-size: 4.3rem;
-      font-weight: 500;
-      line-height: 1; }
-      @media only screen and (max-width: 74em) {
-        .left__heading h2, .left__objective h2 {
-          font-size: 3.8rem; } }
-      @media only screen and (max-width: 63em) {
-        .left__heading h2, .left__objective h2 {
-          font-size: 3.5rem; } }
-      @media only screen and (max-width: 53.5em) {
-        .left__heading h2, .left__objective h2 {
-          font-size: 5rem; } }
-      @media only screen and (max-width: 63em) {
-        .left__heading h2, .left__objective h2 {
-          text-align: center; } }
-  .left__text {
+      border: 1px solid black;
+      box-shadow: 1px 1px 10px #fff, 1px 1px 10px #ccc; }
+  .left__heading {
     font-family: "IBM Plex Mono", monospace;
-    color: white;
-    font-size: 2.8rem;
+    font-size: 4.5rem;
+    font-weight: 600;
+    color: #000;
+    margin: 3rem auto 1rem auto; }
+  .left__text {
+    font-family: "Source Code Pro", monospace;
+    font-size: 2.6rem;
     font-weight: 400;
-    margin: 1rem 0 2rem 0; }
-    @media only screen and (max-width: 74em) {
-      .left__text {
-        font-size: 2.8rem; } }
-    @media only screen and (max-width: 53.5em) {
-      .left__text {
-        font-size: 3.5rem;
-        color: #0487bd; } }
-    .left__text ul {
-      margin-top: 2rem;
-      list-style: none; }
-    .left__text li:not(:last-child) {
-      margin-bottom: 1rem; }
-  .left__contact--item {
-    width: 100%;
+    color: #fff; }
+  .left__icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-gap: 20px; }
+    .left__icons:not(:last-child) {
+      margin: 0 0 5rem 0; }
+    .left__icons--img {
+      height: 10rem; }
+      .left__icons--img img {
+        height: 100%;
+        filter: drop-shadow(5px 5px 4px rgba(255, 255, 255, 0.5)); }
+  .left__icon-text {
+    text-align: left;
+    margin: 0 0 5rem 0;
+    justify-self: flex-start;
     display: flex;
     align-items: center; }
-    @media only screen and (max-width: 63em) {
-      .left__contact--item {
-        flex-direction: column; } }
-    @media only screen and (max-width: 53.5em) {
-      .left__contact--item {
-        flex-direction: row; } }
-    .left__contact--item:not(:last-child) {
-      margin-bottom: 3rem; }
-    .left__contact--item-icon {
-      margin-right: 2rem; }
-      .left__contact--item-icon img {
-        width: 8rem;
-        height: 8rem; }
-        @media only screen and (max-width: 74em) {
-          .left__contact--item-icon img {
-            width: 6rem;
-            height: 6rem; } }
-        @media only screen and (max-width: 53.5em) {
-          .left__contact--item-icon img {
-            width: 8rem;
-            height: 8rem; } }
-    .left__contact--item-text {
-      font-family: "IBM Plex Mono", monospace;
-      color: white;
-      font-size: 2.8rem;
-      font-weight: 400;
-      font-size: 3.2rem;
-      font-weight: 500; }
-      @media only screen and (max-width: 74em) {
-        .left__contact--item-text {
-          font-size: 2.8rem; } }
-      @media only screen and (max-width: 53.5em) {
-        .left__contact--item-text {
-          font-size: 3.5rem;
-          color: #0487bd; } }
-      @media only screen and (max-width: 74em) {
-        .left__contact--item-text {
-          font-size: 2.8rem; } }
-      @media only screen and (max-width: 53.5em) {
-        .left__contact--item-text {
-          font-size: 4rem; } }
-  @media only screen and (max-width: 63em) {
-    .left__skills {
-      text-align: center; } }
-  @media only screen and (max-width: 53.5em) {
-    .left__objective, .left__contact, .left__skills {
-      background-color: rgba(255, 137, 64, 0.6);
-      padding: 2rem 3rem; } }
-  @media only screen and (max-width: 53.5em) {
-    .left__objective, .left__heading, .left__contact, .left__skills:not(:last-child) {
-      margin: 0 0 5rem 0; } }
+    .left__icon-text img {
+      height: 8rem;
+      margin: 0 3rem 0 0; }
+  .left hr {
+    width: 100%;
+    color: #000;
+    margin: 0 0 5rem 0; }
 
 .right {
   width: 60%;
-  padding: 2rem 3rem;
-  animation: slideDown .5s ease-in-out;
-  display: flex;
-  flex-direction: column; }
-  @media only screen and (max-width: 63em) {
-    .right {
-      width: 60vw;
-      padding: 2rem 0 0 0; } }
-  @media only screen and (max-width: 63em) {
-    .right {
-      width: 100vw; } }
-  @media only screen and (max-width: 53.5em) {
-    .right {
-      background-color: #dde0e1; } }
-  .right__header {
-    display: flex;
-    flex-direction: column;
-    padding: 0 2rem; }
-    @media only screen and (max-width: 74em) {
-      .right__header {
-        text-align: center; } }
-    .right__header--name, .right__header--title {
-      align-self: center;
-      font-family: "Quicksand", sans-serif;
-      line-height: 100%; }
-    .right__header--name {
-      font-size: 7rem;
-      font-weight: bold;
-      margin: 0 0 1.5rem 0;
-      color: black; }
-    .right__header--title {
-      text-align: center;
-      color: #0487bd;
-      font-size: 3rem;
-      font-weight: 500;
-      margin-bottom: 2rem; }
-    .right__header--link {
-      background-color: #dde0e1;
-      padding: 1rem;
-      border: 1px solid black;
-      border-radius: 5px;
-      margin-bottom: 1rem;
-      align-self: center;
-      display: flex; }
-      @media only screen and (max-width: 53.5em) {
-        .right__header--link {
-          background-color: transparent;
-          border: none;
-          padding: 0; } }
-      .right__header--link a {
-        font-family: "Quicksand", sans-serif;
-        font-size: 1.5rem;
-        color: #0487bd;
-        text-decoration: none;
-        align-self: center; }
-        @media only screen and (max-width: 63em) {
-          .right__header--link a {
-            font-size: 1.2rem; } }
-        @media only screen and (max-width: 53.5em) {
-          .right__header--link a {
-            font-size: 1.5rem;
-            word-break: break-all; } }
-      .right__header--link-icon {
-        width: 4rem;
-        height: 4rem;
-        margin-right: 1rem; }
-        @media only screen and (max-width: 63em) {
-          .right__header--link-icon {
-            width: 3rem;
-            height: 3rem; } }
-        @media only screen and (max-width: 53.5em) {
-          .right__header--link-icon {
-            width: 4rem;
-            height: 4rem; } }
-  .right__subsection {
-    display: flex;
-    margin: 2rem 0 0 0; }
-    @media only screen and (max-width: 63em) {
-      .right__subsection {
-        flex-direction: column;
-        text-align: center;
-        margin: 2rem auto 0 auto; } }
-    .right__subsection--icon {
-      background-color: #c2eaf4;
+  padding: 10rem 5rem;
+  background: linear-gradient(to top, #dfdfdf, #fff);
+  animation: slideDown .5s ease-in-out; }
+  .right__heading {
+    width: 100%;
+    border-bottom: 1px solid #c5c2c2;
+    padding: 0 0 2rem 0;
+    display: flex; }
+    .right__heading:not(:first-child) {
+      margin: 5rem 0 0 0; }
+    .right__heading--icon {
+      background-color: #c5c2c2;
       border-radius: 50%;
+      width: 10rem;
+      height: auto;
+      padding-bottom: 10rem;
       border: 1px solid black;
-      padding: 1.5rem;
-      margin-right: 1.6rem; }
-      @media only screen and (max-width: 63em) {
-        .right__subsection--icon {
-          background-color: transparent;
-          border: none;
-          padding: 0; } }
-      .right__subsection--icon img {
-        width: 4rem; }
-    .right__subsection--headline {
-      font-family: "Source Code Pro", monospace;
-      color: #0487bd;
-      font-weight: 400;
+      position: relative; }
+      .right__heading--icon img {
+        width: 7rem;
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    .right__heading--text {
+      font-family: "IBM Plex Mono", monospace;
       font-size: 5rem;
-      align-self: center; }
-  .right__listing--history {
-    display: flex;
-    align-items: center;
-    margin: 0 0 1.5rem 0; }
-    @media only screen and (max-width: 63em) {
-      .right__listing--history {
-        flex-direction: column-reverse; } }
-    .right__listing--history-logo {
-      margin: 0 auto;
-      height: 10rem; }
-      @media only screen and (max-width: 63em) {
-        .right__listing--history-logo {
-          margin: 0 auto 2rem auto; } }
-      .right__listing--history-logo img {
-        height: 100%; }
-  .right__listing--description {
-    padding: 2rem;
-    border-radius: 1rem;
-    color: white;
-    font-family: "Rubik", sans-serif;
-    margin: 0 0 3rem 0; }
-    @media only screen and (max-width: 63em) {
-      .right__listing--description {
-        width: 100%;
-        border-radius: 0;
-        word-break: normal;
-        word-wrap: normal; } }
-    @media only screen and (max-width: 53.5em) {
-      .right__listing--description {
-        padding: 2rem 3rem; } }
-    .right__listing--description a {
-      text-decoration: none; }
-    .right__listing--description h2 {
-      font-size: 3rem;
       font-weight: 400;
-      margin-bottom: 1rem; }
-    .right__listing--description ul {
-      list-style: none;
-      font-weight: 300;
-      font-size: 2rem;
-      line-height: 1.5;
-      letter-spacing: .5px; }
-    .right__listing--description li:not(:last-child) {
-      margin-bottom: 1rem; }
+      color: #0487bd;
+      margin: 0 0 0 3rem;
+      align-self: center; }
+  .right__listing {
+    margin: 5rem 0 0 0;
+    display: flex;
+    flex-direction: column; }
+    .right__listing--logo {
+      height: 10rem;
+      align-self: center; }
+    .right__listing--box {
+      width: 100%;
+      padding: 2rem 2.5rem;
+      border-radius: 7px;
+      margin: 2rem 0 0 0;
+      text-align: left;
+      color: #fff; }
+      .right__listing--box---upwork {
+        background-color: #7edd56; }
+      .right__listing--box---hupy {
+        background-color: #ce3f57; }
+      .right__listing--box---northwestern {
+        background-color: #5e3b8e; }
+      .right__listing--box---cuw {
+        background-color: #266da3; }
+      .right__listing--box---title {
+        font-size: 2.8rem;
+        font-weight: 400;
+        font-family: "Rubik", sans-serif;
+        letter-spacing: 1px;
+        margin: 0 0 1.8rem 0; }
+      .right__listing--box---text {
+        font-size: 2rem;
+        font-weight: 300;
+        font-family: "Rubik", sans-serif; }
+        .right__listing--box---text a {
+          text-decoration: none; }
+          .right__listing--box---text a:hover {
+            text-decoration: underline; }
+        .right__listing--box---text span {
+          font-weight: 600;
+          color: #000; }
 
-.divider {
-  width: 85%;
-  margin: 0 0 2rem auto; }
-  @media only screen and (max-width: 63em) {
-    .divider {
-      width: 90%;
-      margin: 0 auto 3rem auto; } }
+.live-links:hover {
+  filter: drop-shadow(5px 5px 4px rgba(255, 0, 0, 0.5));
+  transform: scale(1.05); }
+
+.live-links:active {
+  transform: scale(1); }
+
+@media screen and (max-width: 1100px) {
+  .left {
+    padding: 5rem 2rem; }
+    .left__icon-text {
+      flex-direction: column;
+      text-align: center;
+      margin: 0 0 3rem 0; }
+      .left__icon-text img {
+        margin: 0 0 2rem 0; }
+  .right {
+    padding: 5rem 2rem; } }
+
+@media screen and (max-width: 650px) {
+  .all {
+    flex-direction: column; }
+  .left, .right {
+    width: 100vw; } }
