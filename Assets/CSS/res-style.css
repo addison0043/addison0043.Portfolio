@@ -14,6 +14,9 @@ body {
   padding: 0;
   margin: 0; }
 
+.kill-margin {
+  margin: 0; }
+
 @keyframes slideUp {
   0% {
     opacity: 0;
@@ -103,13 +106,12 @@ body {
     .right__heading--icon {
       background-color: #c5c2c2;
       border-radius: 50%;
-      width: 10rem;
-      height: auto;
-      padding-bottom: 10rem;
+      width: 7rem;
+      padding-bottom: 7rem;
       border: 1px solid black;
       position: relative; }
       .right__heading--icon img {
-        width: 7rem;
+        width: 4rem;
         margin: auto;
         position: absolute;
         top: 50%;
@@ -117,7 +119,7 @@ body {
         transform: translate(-50%, -50%); }
     .right__heading--text {
       font-family: "IBM Plex Mono", monospace;
-      font-size: 5rem;
+      font-size: 4rem;
       font-weight: 400;
       color: #0487bd;
       margin: 0 0 0 3rem;
@@ -127,7 +129,7 @@ body {
     display: flex;
     flex-direction: column; }
     .right__listing--logo {
-      height: 10rem;
+      height: 8rem;
       align-self: center; }
     .right__listing--box {
       width: 100%;
@@ -138,6 +140,8 @@ body {
       color: #fff; }
       .right__listing--box---upwork {
         background-color: #7edd56; }
+      .right__listing--box---nm {
+        background-color: #072a48; }
       .right__listing--box---hupy {
         background-color: #ce3f57; }
       .right__listing--box---northwestern {
@@ -161,6 +165,10 @@ body {
         .right__listing--box---text span {
           font-weight: 600;
           color: #000; }
+      .right__listing--box ul {
+        margin: 0 0 0 2rem; }
+        .right__listing--box ul li {
+          margin: 0 0 1rem 0; }
 
 .live-links:hover {
   filter: drop-shadow(5px 5px 4px rgba(255, 0, 0, 0.5));

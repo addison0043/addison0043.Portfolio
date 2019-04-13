@@ -36,6 +36,8 @@ $drop-shadow: drop-shadow(5px 5px 4px rgba($color-white,.5));
 $hover-shadow: drop-shadow(5px 5px 4px rgba(red,.5));
 $outer-glow: 1px 1px 10px #fff, 1px 1px 10px #ccc;
 
+.kill-margin {margin: 0;}
+
 
 @keyframes slideUp {
 	0% {
@@ -170,15 +172,14 @@ $outer-glow: 1px 1px 10px #fff, 1px 1px 10px #ccc;
         &--icon {
             background-color: $color-grey;
             border-radius: 50%;
-            width: 10rem;
-            height: auto;
-            padding-bottom: 10rem;
+            width: 7rem;
+            padding-bottom: 7rem;
             border: $border-standard;
 
             position: relative;
 
             & img {
-                width: 7rem;
+                width: 4rem;
                 margin: auto;
 
                 position: absolute;
@@ -191,7 +192,7 @@ $outer-glow: 1px 1px 10px #fff, 1px 1px 10px #ccc;
 
         &--text {
             font-family: $IBM;
-            font-size: 5rem;
+            font-size: 4rem;
             font-weight: 400;
             color: $color-primary;
 
@@ -207,7 +208,7 @@ $outer-glow: 1px 1px 10px #fff, 1px 1px 10px #ccc;
         flex-direction: column;
         
         &--logo {
-            height: 10rem;
+            height: 8rem;
             align-self: center;
         }
 
@@ -221,6 +222,10 @@ $outer-glow: 1px 1px 10px #fff, 1px 1px 10px #ccc;
 
             &---upwork {
                 background-color: #7edd56;
+            }
+
+            &---nm {
+                background-color: #072a48;
             }
 
             &---hupy {
@@ -259,6 +264,14 @@ $outer-glow: 1px 1px 10px #fff, 1px 1px 10px #ccc;
                 & span {
                     font-weight: 600;
                     color: $color-black;
+                }
+            }
+
+            & ul {
+                margin: 0 0 0 2rem;
+
+                & li {
+                    margin: 0 0 1rem 0;
                 }
             }
         }
